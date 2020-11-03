@@ -15,6 +15,8 @@
 		C368393025511CF200FD50A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */; };
 		C368393B25511CF200FD50A4 /* SpellSlingersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */; };
 		C368394625511CF200FD50A4 /* SpellSlingersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */; };
+		C368395425515CD100FD50A4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368395325515CD100FD50A4 /* Card.swift */; };
+		C36839562551602500FD50A4 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36839552551602500FD50A4 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C368394125511CF200FD50A4 /* SpellSlingersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellSlingersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellSlingersUITests.swift; sourceTree = "<group>"; };
 		C368394725511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C368395325515CD100FD50A4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C36839552551602500FD50A4 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */,
 				C368393125511CF200FD50A4 /* Info.plist */,
 				C368392B25511CF200FD50A4 /* Preview Content */,
+				C368395325515CD100FD50A4 /* Card.swift */,
+				C36839552551602500FD50A4 /* Deck.swift */,
 			);
 			path = SpellSlingers;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 			files = (
 				C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */,
 				C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */,
+				C36839562551602500FD50A4 /* Deck.swift in Sources */,
 				C368392825511CF000FD50A4 /* ContentView.swift in Sources */,
+				C368395425515CD100FD50A4 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
