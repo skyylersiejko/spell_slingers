@@ -16,29 +16,29 @@ struct Deck: View{
     
     var count: Int
     var owner: String
-    @State public var cards:Array<Card> = []
+    @Binding var cards:Array<Card>
     @State private var CARD_POWER = [1,2,3, 0, 0,1,3]
     @State private var CARD_AMOUNT = [4,4,4, 4, 4,40,4]
     @State private var CARDS = ["spell", "spell", "spell", "recycle", "empty", "resource","cancel"]
+    
    
     
-    init(count_:Int, owner_:String){
+   /* init(count_:Int, owner_:String){
         self.owner = owner_
         self.count = count_
-            }
+    }*/
     
     
     func create() -> Array<Card>{
         for cardIndex in 0...CARDS.count-1{
             for _ in 0...CARD_AMOUNT.count-1{
-              
-                    self.cards.append(Card(_id:cardIndex,name: CARDS[cardIndex]+self.owner, power: CARD_POWER[cardIndex], owner: self.owner ))
+                   
+                self.cards.append(Card(_id:cardIndex,name: CARDS[cardIndex], power: CARD_POWER[cardIndex], owner: self.owner ))
                 
             }
         }
         
-       
-        
+      
         return self.cards
     }
     
@@ -50,19 +50,31 @@ struct Deck: View{
     }
     
     
+    
+   
+    
+    
 
     
   
     
         
   var body: some View {
-     Group{
-        Text(String(self.cards.count))
-       if(self.cards.count > 0){
-           ZStack{
-               ForEach(self.cards, id: \.self) { card in
-                   
-                   Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+    Group{
+        Button(action:{
+            if(self.cards.count < 1){
+                self.cards = self.create()
+            }
+    }){
+       Text("Create Deck")
+    }
+        
+    
+   
+        if(self.cards.count > 0){
+           VStack{
+            ForEach(self.cards, id: \.self) { card in
+                Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
                    
                    }
                                          
@@ -71,7 +83,7 @@ struct Deck: View{
        }
 
         
-    }
+   
     
    /* Image(self.name+self.owner)
     .renderingMode(.original)
@@ -82,4 +94,6 @@ struct Deck: View{
     
     }
             
+
+}
 }

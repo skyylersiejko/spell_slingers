@@ -14,7 +14,8 @@ struct ContentView: View {
     @State  private var POWERA = 0
     @State private var POWERB = 0
     @State private var CURRENT_COLOR = "_blue"
-    var deck = Deck(count_:64, owner_:"_blue")
+   
+    @State var test:Array<Card> = []
    
    
     
@@ -25,8 +26,6 @@ struct ContentView: View {
    
     var body: some View {
         
-   
-       
         ZStack{
             
            
@@ -43,7 +42,7 @@ struct ContentView: View {
                    
                    HStack{
                       Text("HASTACK")
-                    Text(String(self.deck.cards.count))
+                    
                     
                      
                       
@@ -65,19 +64,13 @@ struct ContentView: View {
                     }else{
                          self.CURRENT_COLOR = "_blue"
                     }
-                    self.deck.create();
                     
-                    
-                     /*
-                        let id = Int.random(in: 0...self.CARDS.count-1);
-                        self.cards.append( Card(_id: id, name: self.CARDS[id],  power: self.CARD_POWER[id],owner: self.CURRENT_COLOR))
-                    
-                    */
+                  
                   
                     
                 }){
                     
-                    
+                   Deck(count:64, owner: "_blue", cards: $test)
                    Image("back")
                     .renderingMode(.original)
                     .resizable()
@@ -97,6 +90,7 @@ struct ContentView: View {
                     VStack{
                         Text("CPU")
                         Text(String(self.POWERB))
+                        
                     }
                     .padding(.trailing, 20)
                     .foregroundColor(.white)
@@ -104,8 +98,11 @@ struct ContentView: View {
                     
                 }///h
                 Spacer()
+           
                 
-                   }//v
+            }//z
+        
+        
         }
         
        
