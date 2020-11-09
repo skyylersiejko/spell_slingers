@@ -17,18 +17,9 @@ struct ContentView: View {
    
     @State var test:Array<Card> = []
    
-   
-    
-    
-
-    
-    
-   
-    var body: some View {
+var body: some View {
         
         ZStack{
-            
-           
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
@@ -36,46 +27,28 @@ struct ContentView: View {
                 Spacer()
                 //Image("")
                 Spacer()
-            
-            
-             
-                   
                    HStack{
                       Text("HASTACK")
-                    
-                    
-                     
-                      
                   }
-                
-               
-                       
                    }
-                
+
                 Spacer()
                 Spacer()
-            
-          
-                
-                
+
                 Button(action:{
                     if(Int.random(in:0...1) < 1){
                         self.CURRENT_COLOR = "_red"
                     }else{
                          self.CURRENT_COLOR = "_blue"
                     }
-                    
-                  
-                  
-                    
                 }){
-                    
-                   Deck(count:64, owner: "_blue", cards: $test)
                    Image("back")
                     .renderingMode(.original)
                     .resizable()
                     .frame(width: 150, height:175, alignment: .center)
                     .cornerRadius(30.0)
+                    
+                    Deck(count:64, owner: "_blue", cards: $test)
                 }.padding()
                 Spacer()
                 
@@ -87,28 +60,22 @@ struct ContentView: View {
                     .padding(.leading, 20)
                     .foregroundColor(.white)
                     Spacer()
-                    VStack{
-                        Text("CPU")
-                        Text(String(self.POWERB))
-                        
-                    }
+//                    VStack{
+//                        Text("CPU")
+//                        Text(String(self.POWERB))
+//                        
+//                    }
                     .padding(.trailing, 20)
                     .foregroundColor(.white)
-                    
-                    
+ 
                 }///h
                 Spacer()
-           
+                Spacer()
+                Spacer()
                 
             }//z
-        
-        
-        }
-        
-       
-       
-        
     }
+}
 
 
 struct ContentView_Previews: PreviewProvider {

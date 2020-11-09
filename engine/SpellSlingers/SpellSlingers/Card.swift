@@ -23,22 +23,14 @@ struct Card: View, Hashable {
         self.owner = owner
     }
     
-  
-    
-        
   var body: some View {
-    
         Group{
-            
             Image(self.name+self.owner)
             .renderingMode(.original)
             .resizable()
-            .frame(width: 150, height:175, alignment: .center)
+            .frame(width: 100, height:175, alignment: .center)
             .cornerRadius(30.0)
             .padding(0)
-            
         }
-    
     }
-            
 }
