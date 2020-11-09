@@ -11,75 +11,80 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State  private var POWERA = 0
-    @State private var POWERB = 0
-    @State private var CURRENT_COLOR = "_blue"
+    @Binding var ViewState: Int
    
-    @State var test:Array<Card> = []
-   
+ 
+    
+    
+  
+    
+    
+  
+    
+    
 var body: some View {
         
-        ZStack{
+        Group{
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            VStack{
-                Spacer()
-                //Image("")
-                Spacer()
-                   HStack{
-                      Text("HASTACK")
-                  }
-                   }
-
-                Spacer()
-                Spacer()
-
-                Button(action:{
-                    if(Int.random(in:0...1) < 1){
-                        self.CURRENT_COLOR = "_red"
-                    }else{
-                         self.CURRENT_COLOR = "_blue"
-                    }
-                }){
-                   Image("back")
+           
+           
+                  /* Image("back")
                     .renderingMode(.original)
                     .resizable()
                     .frame(width: 150, height:175, alignment: .center)
-                    .cornerRadius(30.0)
+                    .cornerRadius(30.0)*/
+                  
+                Spacer()
+            
+           
+            MakeView {
+                       switch self.ViewState {
+                       case 0:
+                           return AnyView(Menu())
+                       case 1:
+                           return AnyView(Game())
+                       case 2:
+                            return AnyView(Menu())
+                       default:
+                        return AnyView(Menu())
+                       }
+            }
+                
+            
+                
+                    /*.padding(.leading, 20)
+                    .foregroundColor(.white)*/
                     
-                    Deck(count:64, owner: "_blue", cards: $test)
-                }.padding()
                 Spacer()
                 
-                HStack{
-                    VStack{
-                        Text("player")
-                        Text(String(self.POWERA))
-                    }
-                    .padding(.leading, 20)
-                    .foregroundColor(.white)
-                    Spacer()
-//                    VStack{
-//                        Text("CPU")
-//                        Text(String(self.POWERB))
-//                        
-//                    }
-                    .padding(.trailing, 20)
-                    .foregroundColor(.white)
- 
-                }///h
-                Spacer()
-                Spacer()
-                Spacer()
                 
-            }//z
+        
+    
+    }
+    
+    
+    
+    }
+
+
+
+    struct ContentView_Previews: PreviewProvider {
+       
+        static var previews: some View {
+            StatefulPreview(0) {ContentView(ViewState: $0)}
+           
+        }
     }
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+
+struct MakeView: View {
+    let make: () -> AnyView
+
+    var body: some View {
+        make()
     }
 }
