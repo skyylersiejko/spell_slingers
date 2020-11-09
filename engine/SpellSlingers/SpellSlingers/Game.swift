@@ -11,26 +11,59 @@ import SwiftUI
 
 
 struct Game: View{
-   @State var stack:Array<Card> = []
-   @State var discard:Array<Card> = []
-//   var opponent = Opponent(isActive: false)
-//   var player = Player(isActive: false)
-   @State var GameState:Int = 0
+    @State var stack:Array<Card> = []
+    @State var discard:Array<Card> = []
+   
+    @State var player_IsActive = false
+    @State var opponent_IsActive = false
+    @State var GameState:Int = 0
     
     func start() {
 //        player
-        GameState = 1
+        self.GameState = 1
     }
-   var body: some View {
-        VStack {
-//            Text("Cool")
-//            if(GameState != 0) {
-//                Text("cool")
-//            } else {
-//                self.start()
-//            }
-            Opponent(isActive: false)
-            Player(isActive: false)
+    
+    func switchPriority(){
+        if(self.opponent_IsActive){
+            self.opponent_IsActive = false
+            self.player_IsActive = true
+        }else if(self.player_IsActive){
+            self.player_IsActive = false
+            self.opponent_IsActive = true
+        }else{
+            self.player_IsActive = false
+            self.opponent_IsActive = false
         }
+    }
+    
+    
+    
+    
+    
+    func update(){
+        switch self.GameState{
+            case 0: // start
+                self.start()
+            case 1:// switch priority
+                self.switchPriority()
+            case 2: //resolve stack <--- HOLY SHIT LOOK AT TTHE BELOW
+                Stack(stack: $stack, items: Player(isActive:  $player_IsActive).$hand, blue_points: Player(isActive: $player_IsActive).$points, red_points: Opponent(isActive: $opponent_IsActive).$points).resolve()
+            default:
+                self.start()
+            
+                
+        }
+    }
+    
+    
+   var body: some View {
+        Group{
+            Opponent(isActive: $opponent_IsActive)
+            Player(isActive: $player_IsActive)
+            Stack(stack: $stack, items: Player(isActive: $player_IsActive).$hand, blue_points: Player(isActive: $player_IsActive).$points, red_points: Opponent(isActive: $opponent_IsActive).$points)
+            Discard(discard: $discard, items: $stack)
+        
+    }
+       
     }
 }

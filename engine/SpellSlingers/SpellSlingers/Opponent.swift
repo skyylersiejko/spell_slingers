@@ -13,7 +13,7 @@ import SwiftUI
 struct Opponent: View {
     @State var deck:Array<Card> = []
     @State var hand:Array<Card> = []
-    @State var isActive:Bool
+    @Binding var isActive:Bool
     @State var points:Int = 25
     
 //    init() {
