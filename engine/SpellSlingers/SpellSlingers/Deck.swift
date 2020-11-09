@@ -20,25 +20,20 @@ struct Deck: View{
     @State private var CARD_POWER = [1,2,3, 0, 0,1,3]
     @State private var CARD_AMOUNT = [4,4,4, 4, 4,40,4]
     @State private var CARDS = ["spell", "spell", "spell", "recycle", "empty", "resource","cancel"]
-    
-   
-    
+
    /* init(count_:Int, owner_:String){
         self.owner = owner_
         self.count = count_
     }*/
     
-    
     func create() -> Array<Card>{
-        for cardIndex in 0...CARDS.count-1{
-            for _ in 0...CARD_AMOUNT.count-1{
-                   
+        for cardIndex in 0...CARDS.count-1 {
+            for i in 0...CARD_AMOUNT.count-1 {
+                for _ in 0...CARD_AMOUNT[i] {
                 self.cards.append(Card(_id:cardIndex,name: CARDS[cardIndex], power: CARD_POWER[cardIndex], owner: self.owner ))
-                
+                }
             }
         }
-        
-      
         return self.cards
     }
     
@@ -48,17 +43,7 @@ struct Deck: View{
         return Card(_id: id, name: CARDS[id], power: CARD_POWER[id],
                     owner: self.owner)
     }
-    
-    
-    
-   
-    
-    
 
-    
-  
-    
-        
   var body: some View {
     Group{
         Button(action:{
@@ -68,11 +53,9 @@ struct Deck: View{
     }){
        Text("Create Deck")
     }
-        
-    
-   
+
         if(self.cards.count > 0){
-           VStack{
+           HStack{
             ForEach(self.cards, id: \.self) { card in
                 Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
                    
@@ -82,8 +65,6 @@ struct Deck: View{
            }
        }
 
-        
-   
     
    /* Image(self.name+self.owner)
     .renderingMode(.original)
@@ -93,7 +74,6 @@ struct Deck: View{
     .padding(0)*/
     
     }
-            
 
 }
 }
