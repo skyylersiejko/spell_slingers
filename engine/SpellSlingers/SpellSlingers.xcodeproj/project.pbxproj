@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DBF731C2558B18400B009CD /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF731B2558B18400B009CD /* Hand.swift */; };
+		0DBF731E2558B1FA00B009CD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF731D2558B1FA00B009CD /* Game.swift */; };
+		0DBF73202558B21500B009CD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF731F2558B21500B009CD /* Menu.swift */; };
+		0DBF73222558EA7F00B009CD /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF73212558EA7F00B009CD /* Opponent.swift */; };
+		0DBF73242558EF4500B009CD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF73232558EF4500B009CD /* Player.swift */; };
 		C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392325511CF000FD50A4 /* AppDelegate.swift */; };
 		C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392525511CF000FD50A4 /* SceneDelegate.swift */; };
 		C368392825511CF000FD50A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392725511CF000FD50A4 /* ContentView.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DBF731B2558B18400B009CD /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		0DBF731D2558B1FA00B009CD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0DBF731F2558B21500B009CD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		0DBF73212558EA7F00B009CD /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
+		0DBF73232558EF4500B009CD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C368392025511CF000FD50A4 /* SpellSlingers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellSlingers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368392325511CF000FD50A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C368392525511CF000FD50A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +122,11 @@
 				C368392B25511CF200FD50A4 /* Preview Content */,
 				C368395325515CD100FD50A4 /* Card.swift */,
 				C36839552551602500FD50A4 /* Deck.swift */,
+				0DBF731B2558B18400B009CD /* Hand.swift */,
+				0DBF731D2558B1FA00B009CD /* Game.swift */,
+				0DBF731F2558B21500B009CD /* Menu.swift */,
+				0DBF73232558EF4500B009CD /* Player.swift */,
+				0DBF73212558EA7F00B009CD /* Opponent.swift */,
 			);
 			path = SpellSlingers;
 			sourceTree = "<group>";
@@ -275,9 +290,14 @@
 			files = (
 				C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */,
 				C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */,
+				0DBF73202558B21500B009CD /* Menu.swift in Sources */,
+				0DBF731E2558B1FA00B009CD /* Game.swift in Sources */,
+				0DBF731C2558B18400B009CD /* Hand.swift in Sources */,
 				C36839562551602500FD50A4 /* Deck.swift in Sources */,
 				C368392825511CF000FD50A4 /* ContentView.swift in Sources */,
 				C368395425515CD100FD50A4 /* Card.swift in Sources */,
+				0DBF73242558EF4500B009CD /* Player.swift in Sources */,
+				0DBF73222558EA7F00B009CD /* Opponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,10 +466,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SpellSlingers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SpellSlingers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = na.SpellSlingers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -465,10 +487,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SpellSlingers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SpellSlingers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = na.SpellSlingers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -483,7 +507,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,7 +528,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,6 +548,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,6 +568,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
