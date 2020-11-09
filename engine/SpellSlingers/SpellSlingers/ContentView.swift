@@ -13,17 +13,8 @@ struct ContentView: View {
 
     @Binding var ViewState: Int
    
- 
-    
-    
-  
-    
-    
-  
-    
-    
 var body: some View {
-        
+
         Group{
             Image("background")
                 .resizable()
@@ -58,17 +49,10 @@ var body: some View {
                     .foregroundColor(.white)*/
                     
                 Spacer()
-                
-                
-        
     
     }
     
-    
-    
     }
-
-
 
     struct ContentView_Previews: PreviewProvider {
        

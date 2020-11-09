@@ -13,18 +13,19 @@ import SwiftUI
 //Card : ID, name, power, owner
 struct Deck: View{
    
-    
-    var count: Int
     var owner: String
     @Binding var cards:Array<Card>
+    @Binding var items:Array<Card>
     @State private var CARD_POWER = [1,2,3, 0, 0,1,3]
     @State private var CARD_AMOUNT = [4,4,4, 4, 4,40,4]
-    @State private var CARDS = ["spell", "spell", "spell", "recycle", "empty", "resource","cancel"]
+    @State private var CARDS = ["resource", "spell", "recycle", "empty","cancel"]
 
    /* init(count_:Int, owner_:String){
         self.owner = owner_
         self.count = count_
     }*/
+//    init() {
+//    }
     
     func create() -> Array<Card>{
         for cardIndex in 0...CARDS.count-1 {
@@ -43,27 +44,50 @@ struct Deck: View{
         return Card(_id: id, name: CARDS[id], power: CARD_POWER[id],
                     owner: self.owner)
     }
+    
+    func chooseCard() {
+        let card = self.cards.removeFirst()
+        self.items.append(card)
+    }
+    
+    
 
   var body: some View {
     Group{
         Button(action:{
-            if(self.cards.count < 1){
-                self.cards = self.create()
-            }
-    }){
-       Text("Create Deck")
+//            if(self.)
+            self.chooseCard()
+        }) {
+            ZStack {
+                Image("back")
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: 150, height:175, alignment: .center)
+                    .cornerRadius(30.0)
+                
+                }.padding()
+        }
+    }.onAppear {
+        if(self.cards.count < 1){
+            self.cards = self.create()
+        }
     }
-
-        if(self.cards.count > 0){
-           HStack{
-            ForEach(self.cards, id: \.self) { card in
-                Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
-                   
-                   }
-                                         
-                                         
-           }
-       }
+//        Button(action:{
+//            if(self.cards.count < 1){
+//                self.cards = self.create()
+//            }
+//    }){
+//       Text("Create Deck")
+//    }
+//
+//        if(self.cards.count > 0){
+//           HStack{
+//            ForEach(self.cards, id: \.self) { card in
+//                Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+//
+//                   }
+//           }
+//       }
 
     
    /* Image(self.name+self.owner)
@@ -76,4 +100,4 @@ struct Deck: View{
     }
 
 }
-}
+//}
