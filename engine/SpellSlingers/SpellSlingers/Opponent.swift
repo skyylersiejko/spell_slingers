@@ -29,25 +29,22 @@ struct Opponent: View {
         return(hand)
     }
     
-    func drawCard() {
-//        var card = $deck.chooseCard()
-//        if(card != nil) {
-//            self.hand.append($deck.chooseCard())
-//        }
-//        print("adding card to hand")
-    }
-    
    var body: some View {
         VStack {
+            HStack{
+                ForEach(self.hand, id: \.self) { card in
+                    Image("back")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 100, height:175, alignment: .topLeading)
+                        .cornerRadius(30.0)
+                        .padding(0)
+            }
             Deck(owner: "_red",cards: $deck, items: $hand)
             Text("Opponent")
             .foregroundColor(.red)
 //            Text(String(self.hand.count))
-            HStack{
-                ForEach(self.hand, id: \.self) { card in
-                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
-                }
-            }
+        }
         }
     }
 }

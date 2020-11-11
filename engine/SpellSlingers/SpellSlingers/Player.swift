@@ -23,15 +23,6 @@ struct Player: View {
         return(hand)
     }
     
-    func drawCard() {
-//        var card = self.deck.chooseCard()
-//        if(card != nil) {
-//            self.hand.append(self.deck.chooseCard())
-//        }
-//        print("adding card to hand")
-    }
-    
-
       var body: some View {
         VStack {
             Deck(owner: "_blue",cards: $deck, items: $hand)
@@ -44,8 +35,13 @@ struct Player: View {
             .foregroundColor(.blue)
          HStack{
              ForEach(self.hand, id: \.self) { card in
+                Button(action:{
+                //            if(self.)
+                    print("coo " + String(card._id))
+                }) {
                  Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
-             }
+                }
+            }
          }
       }
     }

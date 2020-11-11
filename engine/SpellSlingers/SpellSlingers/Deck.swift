@@ -70,6 +70,9 @@ struct Deck: View{
     }.onAppear {
         if(self.cards.count < 1){
             self.cards = self.create()
+            for _ in 1...7 {
+                self.chooseCard()
+            }
         }
     }
 //        Button(action:{

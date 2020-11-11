@@ -28,6 +28,7 @@ struct Card: View, Hashable {
             Image(self.name+self.owner)
             .renderingMode(.original)
             .resizable()
+            .aspectRatio(contentMode: .fit)
             .frame(width: 100, height:175, alignment: .center)
             .cornerRadius(30.0)
             .padding(0)
