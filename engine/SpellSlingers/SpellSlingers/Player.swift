@@ -12,7 +12,7 @@ import SwiftUI
 struct Player: View {
     @State var deck:Array<Card> = []
     @State var hand:Array<Card> = []
-    @State var isActive:Bool
+    @Binding var isActive:Bool
     @State var points:Int = 25
     
     func getDeck() -> Array<Card>? {

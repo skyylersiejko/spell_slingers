@@ -17,6 +17,10 @@
 		C32C7C512558EFFA000B2847 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C502558EFFA000B2847 /* Opponent.swift */; };
 		C32C7C532558F064000B2847 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C522558F064000B2847 /* Card.swift */; };
 		C32C7C5525590752000B2847 /* StatefulPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5425590752000B2847 /* StatefulPreview.swift */; };
+		C32C7C5725592D67000B2847 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5625592D67000B2847 /* Player.swift */; };
+		C32C7C5B25593135000B2847 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5A25593135000B2847 /* Deck.swift */; };
+		C32C7C5D25593275000B2847 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5C25593275000B2847 /* Stack.swift */; };
+		C32C7C5F25596249000B2847 /* Discard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5E25596249000B2847 /* Discard.swift */; };
 		C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392325511CF000FD50A4 /* AppDelegate.swift */; };
 		C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392525511CF000FD50A4 /* SceneDelegate.swift */; };
 		C368392825511CF000FD50A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392725511CF000FD50A4 /* ContentView.swift */; };
@@ -25,7 +29,6 @@
 		C368393025511CF200FD50A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */; };
 		C368393B25511CF200FD50A4 /* SpellSlingersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */; };
 		C368394625511CF200FD50A4 /* SpellSlingersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */; };
-		C36839562551602500FD50A4 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36839552551602500FD50A4 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +54,16 @@
 		C32C7C442558EFEF000B2847 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C32C7C452558EFEF000B2847 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		C32C7C462558EFEF000B2847 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		C32C7C472558EFEF000B2847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32C7C482558EFEF000B2847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C32C7C492558EFEF000B2847 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		C32C7C502558EFFA000B2847 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		C32C7C522558F064000B2847 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C32C7C5425590752000B2847 /* StatefulPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreview.swift; sourceTree = "<group>"; };
+		C32C7C5625592D67000B2847 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C32C7C58255930DB000B2847 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C32C7C5A25593135000B2847 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		C32C7C5C25593275000B2847 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		C32C7C5E25596249000B2847 /* Discard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discard.swift; sourceTree = "<group>"; };
 		C368392025511CF000FD50A4 /* SpellSlingers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellSlingers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368392325511CF000FD50A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C368392525511CF000FD50A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,14 +71,12 @@
 		C368392925511CF200FD50A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C368392C25511CF200FD50A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C368392F25511CF200FD50A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C368393125511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C368393625511CF200FD50A4 /* SpellSlingersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellSlingersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellSlingersTests.swift; sourceTree = "<group>"; };
 		C368393C25511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C368394125511CF200FD50A4 /* SpellSlingersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellSlingersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellSlingersUITests.swift; sourceTree = "<group>"; };
 		C368394725511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C36839552551602500FD50A4 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,23 +128,25 @@
 			isa = PBXGroup;
 			children = (
 				C368392325511CF000FD50A4 /* AppDelegate.swift */,
+				C32C7C492558EFEF000B2847 /* Hand.swift */,
 				C368392525511CF000FD50A4 /* SceneDelegate.swift */,
+				C32C7C5625592D67000B2847 /* Player.swift */,
 				C368392725511CF000FD50A4 /* ContentView.swift */,
 				C368392925511CF200FD50A4 /* Assets.xcassets */,
 				C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */,
-				C32C7C492558EFEF000B2847 /* Hand.swift */,
-				C368393125511CF200FD50A4 /* Info.plist */,
 				C368392B25511CF200FD50A4 /* Preview Content */,
 				C32C7C442558EFEF000B2847 /* Card.swift */,
 				C32C7C482558EFEF000B2847 /* ContentView.swift */,
 				C32C7C522558F064000B2847 /* Card.swift */,
+				C32C7C5425590752000B2847 /* StatefulPreview.swift */,
 				C32C7C452558EFEF000B2847 /* Deck.swift */,
+				C32C7C58255930DB000B2847 /* Info.plist */,
+				C32C7C5A25593135000B2847 /* Deck.swift */,
 				C32C7C462558EFEF000B2847 /* Game.swift */,
-				C32C7C472558EFEF000B2847 /* Info.plist */,
 				C32C7C502558EFFA000B2847 /* Opponent.swift */,
 				C32C7C432558EFEF000B2847 /* Menu.swift */,
-				C36839552551602500FD50A4 /* Deck.swift */,
-				C32C7C5425590752000B2847 /* StatefulPreview.swift */,
+				C32C7C5C25593275000B2847 /* Stack.swift */,
+				C32C7C5E25596249000B2847 /* Discard.swift */,
 			);
 			path = SpellSlingers;
 			sourceTree = "<group>";
@@ -303,12 +310,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32C7C5B25593135000B2847 /* Deck.swift in Sources */,
+				C32C7C5D25593275000B2847 /* Stack.swift in Sources */,
+				C32C7C5F25596249000B2847 /* Discard.swift in Sources */,
 				C32C7C4D2558EFEF000B2847 /* Deck.swift in Sources */,
 				C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */,
 				C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */,
 				C32C7C4B2558EFEF000B2847 /* Menu.swift in Sources */,
+				C32C7C5725592D67000B2847 /* Player.swift in Sources */,
 				C32C7C4A2558EFEF000B2847 /* ContentView.swift in Sources */,
-				C36839562551602500FD50A4 /* Deck.swift in Sources */,
 				C32C7C5525590752000B2847 /* StatefulPreview.swift in Sources */,
 				C32C7C4E2558EFEF000B2847 /* Hand.swift in Sources */,
 				C32C7C532558F064000B2847 /* Card.swift in Sources */,
@@ -412,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -466,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

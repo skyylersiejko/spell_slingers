@@ -35,16 +35,16 @@ var body: some View {
                        case 0:
                            return AnyView(Menu())
                        case 1:
-                           return AnyView(Game())
+                        return AnyView(Game())
                        case 2:
-                            return AnyView(Menu())
+                        return AnyView(Menu())
                        default:
                         return AnyView(Menu())
                        }
             }
                 
             
-                
+              
                     /*.padding(.leading, 20)
                     .foregroundColor(.white)*/
                     

@@ -13,7 +13,7 @@ import SwiftUI
 struct Opponent: View {
     @State var deck:Array<Card> = []
     @State var hand:Array<Card> = []
-    @State var isActive:Bool
+    @Binding var isActive:Bool
     @State var points:Int = 25
     
 //    init() {
@@ -36,7 +36,8 @@ struct Opponent: View {
                     Image("back")
                         .renderingMode(.original)
                         .resizable()
-                        .frame(width: 100, height:175, alignment: .topLeading)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height:175, alignment: .topLeading)
                         .cornerRadius(30.0)
                         .padding(0)
             }

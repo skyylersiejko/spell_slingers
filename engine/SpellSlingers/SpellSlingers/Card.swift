@@ -15,6 +15,8 @@ struct Card: View, Hashable {
     var name: String
     var power: Int
     var owner: String
+    var isCasted: Bool = false
+    var isDiscard:Bool = false
     
     init(_id:Int, name: String, power: Int, owner:String){
         self._id = _id
@@ -29,7 +31,7 @@ struct Card: View, Hashable {
             .renderingMode(.original)
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width: 100, height:175, alignment: .center)
+            .frame(width: 30, height:175, alignment: .bottomLeading)
             .cornerRadius(30.0)
             .padding(0)
         }
