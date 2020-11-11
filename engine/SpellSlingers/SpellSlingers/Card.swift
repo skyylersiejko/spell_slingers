@@ -15,6 +15,8 @@ struct Card: View, Hashable {
     var name: String
     var power: Int
     var owner: String
+    var isCasted: Bool = false
+    var isDiscard:Bool = false
     
     init(_id:Int, name: String, power: Int, owner:String){
         self._id = _id

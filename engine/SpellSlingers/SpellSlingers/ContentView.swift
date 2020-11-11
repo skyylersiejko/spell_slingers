@@ -44,7 +44,7 @@ var body: some View {
             }
                 
             
-                
+              
                     /*.padding(.leading, 20)
                     .foregroundColor(.white)*/
                     
