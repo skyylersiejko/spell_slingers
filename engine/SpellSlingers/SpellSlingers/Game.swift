@@ -68,15 +68,16 @@ struct Game: View{
     }
     
    var body: some View {
-        Group{
+        VStack {
             Opponent(isActive: $opponent_IsActive)
-            Player(isActive: $player_IsActive)
+            HStack {
             Stack(stack: $stack,
                   items: Player(isActive: $player_IsActive).$hand,
                   blue_points: Player(isActive: $player_IsActive).$points,
                   red_points: Opponent(isActive: $opponent_IsActive).$points)
             Discard(discard: $discard, items: $stack)
-        
+            }
+            Player(isActive: $player_IsActive)
     }
        
     }
