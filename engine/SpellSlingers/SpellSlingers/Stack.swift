@@ -67,14 +67,17 @@ struct Stack: View{
     
     var body: some View {
         Group{
-            if(self.stack.count > 0){
-                ZStack{
-                    ForEach(self.stack, id: \.self) { card in
-                       Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
-                    }
+            if(self.stack.count < 1) {
+                Image("stack_pile")
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: 150, height:175, alignment: .center)
+                    .cornerRadius(30.0)
+            } else {
+                ForEach(self.stack, id: \.self) { card in
+                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
                 }
             }
         }
     }
-
 }

@@ -47,8 +47,8 @@ struct Card: View,Hashable{
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 30, height:175, alignment: .bottomLeading)
-                .cornerRadius(30.0)
-                .padding(0)
+//                .cornerRadius(30.0)
+//                .padding(0)
             }else{
                
                 

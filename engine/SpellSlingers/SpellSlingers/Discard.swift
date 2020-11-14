@@ -64,7 +64,6 @@ struct Discard: View{
                     }
                 }
                 
-                
                 Button(action: {
                     self.toggle()
                 }){
@@ -82,6 +81,12 @@ struct Discard: View{
                           
                 }
                 
+            } else {
+                Image("discard_pile")
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 150, height:175, alignment: .center)
+                .cornerRadius(30.0)
             }
         }
     }
