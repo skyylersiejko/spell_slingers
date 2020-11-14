@@ -31,13 +31,12 @@ struct Opponent: View {
     
    var body: some View {
         VStack {
-            ZStack{
+            HStack{
                 ForEach(self.hand, id: \.self) { card in
                     Image("back")
                         .resizable()
                         .aspectRatio(0.90, contentMode: .fill)
                         .frame(width: 30, height:175, alignment: .topLeading)
-                        .overlay(Image("back"),alignment: .topLeading)
 //                        .cornerRadius(30.0)
 //                        .padding(0)
                     
