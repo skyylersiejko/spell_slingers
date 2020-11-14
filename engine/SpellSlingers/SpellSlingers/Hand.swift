@@ -25,11 +25,11 @@ struct Hand: View{
     var body: some View {
         Group {
             if(self.cards.count > 0){
-            HStack{
-             ForEach(self.cards, id: \.self) { card in
-                Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
-             }
-          }
+                /*HStack{
+                 ForEach(self.cards, id: \.self) { card in
+                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+                 }
+              }*/
         }
     }
   }
