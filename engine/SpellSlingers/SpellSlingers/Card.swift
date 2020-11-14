@@ -15,8 +15,8 @@ struct Card: View, Hashable {
     var name: String
     var power: Int
     var owner: String
-    var isCasted: Bool = false
-    var isDiscard:Bool = false
+    var isCasted: Bool = false // put on stack
+    var isDiscard:Bool = false // put on discard pile
     
     init(_id:Int, name: String, power: Int, owner:String){
         self._id = _id
@@ -28,12 +28,12 @@ struct Card: View, Hashable {
   var body: some View {
         Group{
             Image(self.name+self.owner)
-            .renderingMode(.original)
+//            .renderingMode(.original)
             .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 30, height:175, alignment: .bottomLeading)
-            .cornerRadius(30.0)
-            .padding(0)
+            .aspectRatio(0.90, contentMode: .fill)
+//            .frame(width: 30, height:175, alignment: .bottomLeading)
+//            .cornerRadius(30.0)
+//            .padding(0)
         }
     }
 }

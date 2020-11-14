@@ -35,12 +35,7 @@ struct Player: View {
             .foregroundColor(.blue)
          HStack{
              ForEach(self.hand, id: \.self) { card in
-                Button(action:{
-                //            if(self.)
-                    print("coo " + String(card._id))
-                }) {
-                 Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
-                }
+                Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
             }
          }
       }
