@@ -18,7 +18,7 @@ struct Deck: View{
     @Binding var items:Array<Card>
     @State private var CARD_POWER = [1,2,3, 0, 0,1,3]
     @State private var CARD_AMOUNT = [4,4,4, 4, 4,40,4]
-    @State private var CARDS = ["resource", "spell", "recycle", "empty","cancel"]
+    @State private var CARDS = ["resource", "spell", "recycle", "resolve","cancel"]
 
    /* init(count_:Int, owner_:String){
         self.owner = owner_
@@ -35,6 +35,11 @@ struct Deck: View{
                 }
             }
         }
+        
+        if(self.cards.count > 1){
+            self.cards = self.shuffle()
+            print(self.cards)
+        }
         return self.cards
     }
     
@@ -44,6 +49,22 @@ struct Deck: View{
         return Card(_id: id, name: CARDS[id], power: CARD_POWER[id],
                     owner: self.owner)
     }
+    
+    
+    func shuffle() -> Array<Card>{
+        var newDeck:Array<Card> = []
+        while(self.cards.count > 0){
+            let i = Int.random(in: 0..<self.cards.count)
+            let card = self.cards[i]
+            newDeck.append(card)
+            self.cards.remove(at: i )
+            
+        }
+        
+        self.cards = newDeck
+        return self.cards
+    }
+    
     
     func chooseCard() {
         let card = self.cards.removeFirst()
@@ -70,6 +91,7 @@ struct Deck: View{
     }.onAppear {
         if(self.cards.count < 1){
             self.cards = self.create()
+
             for _ in 1...7 {
                 self.chooseCard()
             }

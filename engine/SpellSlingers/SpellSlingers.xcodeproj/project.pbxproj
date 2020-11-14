@@ -29,6 +29,7 @@
 		C368393025511CF200FD50A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */; };
 		C368393B25511CF200FD50A4 /* SpellSlingersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */; };
 		C368394625511CF200FD50A4 /* SpellSlingersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */; };
+		C39EA95E255FBCB300E1FAAB /* resolve.png in Resources */ = {isa = PBXBuildFile; fileRef = C39EA95D255FBCB300E1FAAB /* resolve.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C368394125511CF200FD50A4 /* SpellSlingersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellSlingersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellSlingersUITests.swift; sourceTree = "<group>"; };
 		C368394725511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39EA95D255FBCB300E1FAAB /* resolve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resolve.png; path = ../../../res/resolve.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				C368392525511CF000FD50A4 /* SceneDelegate.swift */,
 				C32C7C5625592D67000B2847 /* Player.swift */,
 				C368392725511CF000FD50A4 /* ContentView.swift */,
+				C39EA95D255FBCB300E1FAAB /* resolve.png */,
 				C368392925511CF200FD50A4 /* Assets.xcassets */,
 				C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */,
 				C368392B25511CF200FD50A4 /* Preview Content */,
@@ -284,6 +287,7 @@
 			files = (
 				C368393025511CF200FD50A4 /* LaunchScreen.storyboard in Resources */,
 				C368392D25511CF200FD50A4 /* Preview Assets.xcassets in Resources */,
+				C39EA95E255FBCB300E1FAAB /* resolve.png in Resources */,
 				C368392A25511CF200FD50A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
