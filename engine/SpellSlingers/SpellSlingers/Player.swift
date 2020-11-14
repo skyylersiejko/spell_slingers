@@ -35,7 +35,9 @@ struct Player: View {
             .foregroundColor(.blue)
          HStack{
              ForEach(self.hand, id: \.self) { card in
-                Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+                VStack{
+                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+                }
             }
          }
       }

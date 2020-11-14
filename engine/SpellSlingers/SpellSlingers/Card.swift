@@ -67,12 +67,13 @@ struct Card: View,Hashable{
                                 self.offset = gesture.translation
                         }
                         .onEnded{ _ in
-                             self.offset = .zero
-                           /* if abs(self.offset.width) > 100{
-                                self.removal?()
+                             //self.offset = .zero
+                           if abs(self.offset.height) > 100{
+                                //self.removal?()
+                            
                             }else {
                                 self.offset = .zero
-                            }*/
+                            }
                         
                     }
                         
