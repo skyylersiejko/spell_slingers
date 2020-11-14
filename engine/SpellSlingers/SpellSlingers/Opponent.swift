@@ -34,11 +34,9 @@ struct Opponent: View {
             HStack{
                 ForEach(self.hand, id: \.self) { card in
                     Image("back")
-//                        .renderingMode(.original)
                         .resizable()
                         .aspectRatio(0.90, contentMode: .fill)
                         .frame(width: 30, height:175, alignment: .topLeading)
-//                        .overlay(Image("back"),alignment: .topLeading)
 //                        .cornerRadius(30.0)
 //                        .padding(0)
                     
