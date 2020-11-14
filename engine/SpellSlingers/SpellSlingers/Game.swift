@@ -55,7 +55,7 @@ struct Game: View{
                           red_points: Opponent(isActive: $opponent_IsActive).$points).update()
                 }
                 self.GameState += 1
-            case 3: //resolve stack <--- HOLY SHIT LOOK AT TTHE BELOW
+            case 3: //resolve stack 
                 Stack(stack: $stack,
                       items: Player(isActive:  $player_IsActive).$hand,
                       blue_points: Player(isActive: $player_IsActive).$points,

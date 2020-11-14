@@ -59,6 +59,7 @@ struct Card: View,Hashable{
                             .padding(0)
                             .frame(width:30, height: 175)
                             .offset(x: offset.width, y:offset.height)
+                            .animation(.spring())
                             //.rotationEffect(.degrees(Double(offset.width / 5 )))
                            // .opacity(2-Double(abs(offset.width / 50)))
                             .gesture(DragGesture()
