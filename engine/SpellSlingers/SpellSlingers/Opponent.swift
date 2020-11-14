@@ -31,21 +31,21 @@ struct Opponent: View {
     
    var body: some View {
         VStack {
-            HStack{
+            ZStack{
                 ForEach(self.hand, id: \.self) { card in
                     Image("back")
-                        .renderingMode(.original)
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .aspectRatio(0.90, contentMode: .fill)
                         .frame(width: 30, height:175, alignment: .topLeading)
-                        .cornerRadius(30.0)
-                        .padding(0)
+                        .overlay(Image("back"),alignment: .topLeading)
+//                        .cornerRadius(30.0)
+//                        .padding(0)
+                    
             }
-            Deck(owner: "_red",cards: $deck, items: $hand)
-            Text("Opponent")
-            .foregroundColor(.red)
-//            Text(String(self.hand.count))
         }
+        Deck(owner: "_red",cards: $deck, items: $hand)
+        Text("Opponent")
+        .foregroundColor(.red)
         }
     }
 }

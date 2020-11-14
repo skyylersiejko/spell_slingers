@@ -71,7 +71,6 @@ struct Stack: View{
                 ZStack{
                     ForEach(self.stack, id: \.self) { card in
                        Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
-            
                     }
                 }
             }

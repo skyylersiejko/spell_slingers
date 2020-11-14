@@ -81,8 +81,5 @@ struct Card: View,Hashable{
                 }
                 
             }
-            
-            
-        
     }
 }
