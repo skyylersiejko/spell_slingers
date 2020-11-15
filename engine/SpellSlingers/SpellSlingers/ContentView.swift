@@ -35,6 +35,7 @@ var body: some View {
                        case 0:
                            return AnyView(Menu())
                        case 1:
+                        Game().start()
                         return AnyView(Game())
                        case 2:
                         return AnyView(Menu())

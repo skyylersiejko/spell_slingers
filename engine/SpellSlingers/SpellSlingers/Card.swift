@@ -21,7 +21,7 @@ struct Card: View,Hashable{
     var name: String
     var power: Int
     var owner: String
-    var isCasted: Bool = false
+   @State public var isCasted: Bool = false
     var isDiscard:Bool = false
     var removal: (() -> Void)?  = nil
     @State private var offset = CGSize.zero
@@ -35,6 +35,7 @@ struct Card: View,Hashable{
        
     }
     
+  
     func hash(into hasher: inout Hasher) {
         hasher.combine(self._id)
     }
@@ -70,6 +71,8 @@ struct Card: View,Hashable{
                              //self.offset = .zero
                            if abs(self.offset.height) > 100{
                                 //self.removal?()
+                            self.isCasted = true
+                            print("was casted:" + self.name)
                             
                             }else {
                                 self.offset = .zero

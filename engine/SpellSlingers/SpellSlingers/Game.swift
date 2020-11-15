@@ -8,19 +8,37 @@
 
 import Foundation
 import SwiftUI
-
-
+import QuartzCore
+    
 struct Game: View{
     @State var stack:Array<Card> = []
     @State var discard:Array<Card> = []
-   
+  
+    
     @State var player_IsActive = false
     @State var opponent_IsActive = false
-    @State var GameState:Int = 0
+    @State var GameState:Int = 2
+     var player: Player! = nil
+    var opponent: Opponent! = nil
+  
+    
+    init(){
+        player = Player(isActive: $player_IsActive)
+        opponent = Opponent(isActive:$opponent_IsActive)
+    }
+  
     
     func start() {
-//        player
-        self.GameState = 1
+      
+        self.GameState = 2
+        GameLoop(doSomething: self.gameLoop)
+        print("started Loop")
+       
+    }
+    
+    
+    func gameLoop(){
+        self.update()
     }
     
     func switchPriority(){
@@ -34,6 +52,7 @@ struct Game: View{
             self.player_IsActive = false
             self.opponent_IsActive = false
         }
+        self.GameState += 1
     }
     
     func update(){
@@ -45,21 +64,21 @@ struct Game: View{
             case 2: // update stack
                 if(self.opponent_IsActive) {
                     Stack(stack: $stack,
-                          items: Opponent(isActive:  $opponent_IsActive).$hand,
-                          blue_points: Player(isActive: $player_IsActive).$points,
-                          red_points: Opponent(isActive: $opponent_IsActive).$points).update()
+                          items:opponent.$hand,
+                          blue_points: player.$points,
+                          red_points: opponent.$points).update()
                 } else {
                     Stack(stack: $stack,
-                          items: Player(isActive:  $player_IsActive).$hand,
-                          blue_points: Player(isActive: $player_IsActive).$points,
-                          red_points: Opponent(isActive: $opponent_IsActive).$points).update()
+                          items: player.$hand,
+                          blue_points: player.$points,
+                          red_points:opponent.$points).update()
                 }
                 self.GameState += 1
             case 3: //resolve stack 
                 Stack(stack: $stack,
-                      items: Player(isActive:  $player_IsActive).$hand,
-                      blue_points: Player(isActive: $player_IsActive).$points,
-                      red_points: Opponent(isActive: $opponent_IsActive).$points).resolve()
+                      items: player.$hand,
+                      blue_points: player.$points,
+                      red_points: opponent.$points).resolve()
             default:
                 self.start()
             
@@ -69,15 +88,17 @@ struct Game: View{
     
    var body: some View {
         VStack {
-            Opponent(isActive: $opponent_IsActive)
+            opponent
             HStack {
             Stack(stack: $stack,
-                  items: Player(isActive: $player_IsActive).$hand,
-                  blue_points: Player(isActive: $player_IsActive).$points,
-                  red_points: Opponent(isActive: $opponent_IsActive).$points)
+                  items: player.$hand,
+                  blue_points:player.$points,
+                  red_points: opponent.$points)
             Discard(discard: $discard, items: $stack)
             }
-            Player(isActive: $player_IsActive)
+            player
+           
+            
     }
        
     }

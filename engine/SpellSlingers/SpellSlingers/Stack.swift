@@ -22,10 +22,12 @@ struct Stack: View{
 
 
     func update(){
-        for i in 0...self.items.count{
-            if(self.items[i].isCasted && self.items.contains(self.items[i])){
-                self.stack.insert(self.items[i], at: 0 )
-                self.items.remove(at:i)
+        if(self.items.count > 0){
+                for i in 0...self.items.count-1{
+                if(self.items[i].isCasted && self.items.contains(self.items[i])){
+                    self.stack.insert(self.items[i], at: 0 )
+                    self.items.remove(at:i)
+                }
             }
         }
     }

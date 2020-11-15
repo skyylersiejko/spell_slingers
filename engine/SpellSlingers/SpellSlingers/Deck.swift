@@ -37,10 +37,12 @@ struct Deck: View{
         }
         
         if(self.cards.count > 1){
-            self.cards = self.shuffle()
-            print(self.cards)
+          
+            return self.shuffle()
+           
+        }else{
+            return self.cards
         }
-        return self.cards
     }
     
     
