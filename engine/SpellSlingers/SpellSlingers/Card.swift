@@ -69,7 +69,7 @@ struct Card: View,Hashable{
                         }
                         .onEnded{ _ in
                              //self.offset = .zero
-                           if abs(self.offset.height) > 100{
+                           if abs(self.offset.height) > 200{
                                 //self.removal?()
                             self.isCasted = true
                             print("was casted:" + self.name)

@@ -13,8 +13,8 @@ import SwiftUI
 //Card : ID, name, power, owner
 struct Deck: View{
    
-    var owner: String
-    @Binding var cards:Array<Card>
+    @State var owner: String
+    @State var cards:Array<Card> = []
     @Binding var items:Array<Card>
     @State private var CARD_POWER = [1,2,3, 0, 0,1,3]
     @State private var CARD_AMOUNT = [4,4,4, 4, 4,40,4]
@@ -24,8 +24,14 @@ struct Deck: View{
         self.owner = owner_
         self.count = count_
     }*/
-//    init() {
-//    }
+    
+    init( owner:String,items:Binding<Array<Card>>!){
+        
+        _items = items
+        _owner = State(initialValue: owner)
+        
+    }
+    
     
     func create() -> Array<Card>{
         for cardIndex in 0...CARDS.count-1 {
@@ -64,6 +70,7 @@ struct Deck: View{
         }
         
         self.cards = newDeck
+        print(self.cards)
         return self.cards
     }
     

@@ -11,18 +11,25 @@ import SwiftUI
 
 
 struct Opponent: View {
-    @State var deck:Array<Card> = []
+ 
     @State var hand:Array<Card> = []
+    @State var deck:Deck
     @Binding var isActive:Bool
     @State var points:Int = 25
+   
+    init(Active: Binding<Bool>, deck_:Deck!){
+        _isActive = Active
+        _deck = State(initialValue: deck_)
+    }
+    
     
 //    init() {
 //         Deck(owner: "_red", cards: $deck)
 //    }
     
 
-    func getDeck() -> Array<Card>? {
-        return(deck)
+    func getDeck() -> Deck? {
+        return(self.deck)
     }
     
     func getHand() -> Array<Card>? {
@@ -42,7 +49,7 @@ struct Opponent: View {
                     
             }
         }
-        Deck(owner: "_red",cards: $deck, items: $hand)
+           
         Text("Opponent")
         .foregroundColor(.red)
         }

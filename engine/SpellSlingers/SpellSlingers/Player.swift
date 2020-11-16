@@ -10,13 +10,19 @@ import Foundation
 import SwiftUI
 
 struct Player: View {
-    @State var deck:Array<Card> = []
+    
     @State var hand:Array<Card> = []
+    @State var deck:Deck
     @Binding var isActive:Bool
     @State var points:Int = 25
+   
+    init(Active: Binding<Bool>, deck_:Deck!){
+        _isActive = Active
+        _deck = State(initialValue: deck_)
+    }
     
-    func getDeck() -> Array<Card>? {
-        return(deck)
+    func getDeck() -> Deck? {
+        return(self.deck)
     }
     
     func getHand() -> Array<Card>? {
@@ -25,7 +31,7 @@ struct Player: View {
     
       var body: some View {
         VStack {
-            Deck(owner: "_blue",cards: $deck, items: $hand)
+            self.deck
 //            self.deck.create()
 //            if(isActive) {
 //                self.deck.chooseCard()
