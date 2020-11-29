@@ -10,28 +10,34 @@ import Foundation
 
 import SwiftUI
 
+
+@propertyWrapper struct Field<T> {
+    var wrappedValue: T
+    init(wrappedValue: T) {
+        self.wrappedValue = wrappedValue
+    }
+}
+
+
+
+
+
+
+
+
 //Card : ID, name, power, owner
 struct Deck: View{
    
-    @State var owner: String
+    @State var owner: String = "blue_"
     @State var cards:Array<Card> = []
-    @Binding var items:Array<Card>
+    @Binding var hand:Pile
     @State private var CARD_POWER = [1,2,3, 0, 0,1,3]
     @State private var CARD_AMOUNT = [4,4,4, 4, 4,40,4]
     @State private var CARDS = ["resource", "spell", "recycle", "resolve","cancel"]
 
-   /* init(count_:Int, owner_:String){
-        self.owner = owner_
-        self.count = count_
-    }*/
+  
     
-    init( owner:String,items:Binding<Array<Card>>!){
-        
-        _items = items
-        _owner = State(initialValue: owner)
-        
-    }
-    
+   
     
     func create() -> Array<Card>{
         for cardIndex in 0...CARDS.count-1 {
@@ -43,7 +49,8 @@ struct Deck: View{
         }
         
         if(self.cards.count > 1){
-          
+            self.chooseCard()
+            print(self.hand.items.count)
             return self.shuffle()
            
         }else{
@@ -70,16 +77,22 @@ struct Deck: View{
         }
         
         self.cards = newDeck
-        print(self.cards)
         return self.cards
     }
     
     
     func chooseCard() {
-        let card = self.cards.removeFirst()
-        self.items.append(card)
+        if(self.cards.count > 0){
+            print("choose",self.cards.count)
+            let card = self.cards.removeFirst()
+            print(" remove card", card)
+            hand.push(card)
+            print("items", self.hand.items)
+        }
     }
     
+    
+  
     
 
   var body: some View {
@@ -101,9 +114,7 @@ struct Deck: View{
         if(self.cards.count < 1){
             self.cards = self.create()
 
-            for _ in 1...7 {
-                self.chooseCard()
-            }
+           
         }
     }
 //        Button(action:{

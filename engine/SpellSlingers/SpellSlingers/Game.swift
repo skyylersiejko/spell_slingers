@@ -19,24 +19,21 @@ struct Game: View{
     @State var opponent_IsActive = false
     @State var GameState:Int = 2
     var player: Player! = nil
-    @State var player_hand: Array<Card> = []
-     @State var opponent_hand: Array<Card> = []
+    @State var player_hand: Pile = Pile()
+    @State var opponent_hand: Pile = Pile()
     var opponent: Opponent! = nil
   
     
-    init(){
-        player = Player(Active: $player_IsActive, deck_:Deck(owner: "blue_",items: $player_hand ))
-       
-        opponent = Opponent(Active:$opponent_IsActive, deck_:Deck(owner: "red_",items: $opponent_hand ))
-    }
+   
   
     
-    func start() {
+     func start() {
+       
         player.deck.cards = player.deck.create()
         opponent.deck.cards = opponent.deck.create()
         self.GameState = 2
        
-        GameLoop(doSomething: self.gameLoop)
+        GameLoop(loop: self.gameLoop)
         print("started Loop")
        
     }
@@ -77,6 +74,8 @@ struct Game: View{
                           items: player.$hand,
                           blue_points: player.$points,
                           red_points:opponent.$points).update()
+                   
+
                 }
                 self.GameState += 1
             case 3: //resolve stack 
@@ -94,6 +93,7 @@ struct Game: View{
    var body: some View {
         VStack {
             opponent
+           
             HStack {
             Stack(stack: $stack,
                   items: player.$hand,
@@ -101,6 +101,8 @@ struct Game: View{
                   red_points: opponent.$points)
             Discard(discard: $discard, items: $stack)
             }
+                
+            
             player
            
             

@@ -22,7 +22,7 @@ struct Stack: View{
 
 
     func update(){
-        print(self.items.count)
+       //print(self.items.count)
         if(self.items.count > 0){
             print("incount")
                 for i in 0...self.items.count-1{

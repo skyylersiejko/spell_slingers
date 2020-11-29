@@ -31,6 +31,7 @@
 		C368394625511CF200FD50A4 /* SpellSlingersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */; };
 		C3809B022561578100763CA6 /* GameLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3809B012561578100763CA6 /* GameLoop.swift */; };
 		C39EA95E255FBCB300E1FAAB /* resolve.png in Resources */ = {isa = PBXBuildFile; fileRef = C39EA95D255FBCB300E1FAAB /* resolve.png */; };
+		C3EEF126256405D2008FF840 /* Pile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEF125256405D2008FF840 /* Pile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		C368394725511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3809B012561578100763CA6 /* GameLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoop.swift; sourceTree = "<group>"; };
 		C39EA95D255FBCB300E1FAAB /* resolve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resolve.png; path = ../../../res/resolve.png; sourceTree = "<group>"; };
+		C3EEF125256405D2008FF840 /* Pile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				C368392925511CF200FD50A4 /* Assets.xcassets */,
 				C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */,
 				C368392B25511CF200FD50A4 /* Preview Content */,
+				C3EEF125256405D2008FF840 /* Pile.swift */,
 				C32C7C442558EFEF000B2847 /* Card.swift */,
 				C32C7C482558EFEF000B2847 /* ContentView.swift */,
 				C32C7C522558F064000B2847 /* Card.swift */,
@@ -332,6 +335,7 @@
 				C32C7C532558F064000B2847 /* Card.swift in Sources */,
 				C368392825511CF000FD50A4 /* ContentView.swift in Sources */,
 				C32C7C512558EFFA000B2847 /* Opponent.swift in Sources */,
+				C3EEF126256405D2008FF840 /* Pile.swift in Sources */,
 				C32C7C4C2558EFEF000B2847 /* Game.swift in Sources */,
 				C32C7C4F2558EFEF000B2847 /* Card.swift in Sources */,
 			);

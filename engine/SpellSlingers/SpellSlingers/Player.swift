@@ -12,14 +12,18 @@ import SwiftUI
 struct Player: View {
     
     @State var hand:Array<Card> = []
-    @State var deck:Deck
+    @Binding var deck:Deck
     @Binding var isActive:Bool
     @State var points:Int = 25
    
-    init(Active: Binding<Bool>, deck_:Deck!){
+    init(Active: Binding<Bool>, deck_:Binding<Deck>){
         _isActive = Active
-        _deck = State(initialValue: deck_)
+        _deck = deck_
+        
+       
     }
+    
+  
     
     func getDeck() -> Deck? {
         return(self.deck)

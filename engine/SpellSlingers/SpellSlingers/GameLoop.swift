@@ -11,18 +11,18 @@ import UIKit
 
 class GameLoop : NSObject {
 
-    var doSomething: () -> ()?
+    var Loop: () -> ()?
     var displayLink : CADisplayLink!
 
-    init(doSomething: @escaping () -> ()) {
-        self.doSomething = doSomething
+    init(loop: @escaping () -> ()) {
+        self.Loop = loop
         super.init()
         start()
     }
 
     // you could overwrite this too
     @objc func handleTimer() {
-        doSomething()
+        Loop()
     }
    
    func start() {
