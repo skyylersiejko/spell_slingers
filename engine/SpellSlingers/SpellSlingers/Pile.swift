@@ -10,8 +10,7 @@ import Foundation
 
 
 struct Pile {
-    public private(set) var items = [Card]() // Empty items array
-    
+    public var items = [Card]() // Empty items array
     mutating func push(_ item: Card) {
         items.append(item)
     }
@@ -19,6 +18,17 @@ struct Pile {
     mutating func pop() -> Card? {
         if !items.isEmpty {
            return items.removeLast()
+        }
+        return nil
+    }
+    
+    mutating func remove(index: Int) {
+        items.remove(at: index)
+    }
+    
+    mutating func returnLast() -> Card? {
+        if !items.isEmpty {
+            return items.last
         }
         return nil
     }

@@ -29,7 +29,6 @@
 		C368393025511CF200FD50A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */; };
 		C368393B25511CF200FD50A4 /* SpellSlingersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */; };
 		C368394625511CF200FD50A4 /* SpellSlingersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */; };
-		C3809B022561578100763CA6 /* GameLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3809B012561578100763CA6 /* GameLoop.swift */; };
 		C39EA95E255FBCB300E1FAAB /* resolve.png in Resources */ = {isa = PBXBuildFile; fileRef = C39EA95D255FBCB300E1FAAB /* resolve.png */; };
 		C3EEF126256405D2008FF840 /* Pile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEF125256405D2008FF840 /* Pile.swift */; };
 /* End PBXBuildFile section */
@@ -80,7 +79,6 @@
 		C368394125511CF200FD50A4 /* SpellSlingersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellSlingersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellSlingersUITests.swift; sourceTree = "<group>"; };
 		C368394725511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3809B012561578100763CA6 /* GameLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoop.swift; sourceTree = "<group>"; };
 		C39EA95D255FBCB300E1FAAB /* resolve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resolve.png; path = ../../../res/resolve.png; sourceTree = "<group>"; };
 		C3EEF125256405D2008FF840 /* Pile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +153,6 @@
 				C32C7C432558EFEF000B2847 /* Menu.swift */,
 				C32C7C5C25593275000B2847 /* Stack.swift */,
 				C32C7C5E25596249000B2847 /* Discard.swift */,
-				C3809B012561578100763CA6 /* GameLoop.swift */,
 			);
 			path = SpellSlingers;
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 				C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */,
 				C32C7C4B2558EFEF000B2847 /* Menu.swift in Sources */,
 				C32C7C5725592D67000B2847 /* Player.swift in Sources */,
-				C3809B022561578100763CA6 /* GameLoop.swift in Sources */,
 				C32C7C4A2558EFEF000B2847 /* ContentView.swift in Sources */,
 				C32C7C5525590752000B2847 /* StatefulPreview.swift in Sources */,
 				C32C7C4E2558EFEF000B2847 /* Hand.swift in Sources */,

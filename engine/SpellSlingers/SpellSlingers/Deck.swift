@@ -28,7 +28,7 @@ import SwiftUI
 //Card : ID, name, power, owner
 struct Deck: View{
    
-    @State var owner: String = "blue_"
+    @State var owner: String = "_blue"
     @State var cards:Array<Card> = []
     @Binding var hand:Pile
     @State private var CARD_POWER = [1,2,3, 0, 0,1,3]
@@ -36,9 +36,6 @@ struct Deck: View{
     @State private var CARDS = ["resource", "spell", "recycle", "resolve","cancel"]
 
   
-    
-   
-    
     func create() -> Array<Card>{
         for cardIndex in 0...CARDS.count-1 {
             for i in 0...CARD_AMOUNT.count-1 {
@@ -50,12 +47,14 @@ struct Deck: View{
         
         if(self.cards.count > 1){
             self.chooseCard()
-            print(self.hand.items.count)
+//            print(self.hand.items.count)
             return self.shuffle()
            
         }else{
-            return self.cards
+            self.cards = self.shuffle()
+            print(self.cards)
         }
+        return self.cards
     }
     
     
@@ -85,9 +84,9 @@ struct Deck: View{
         if(self.cards.count > 0){
             print("choose",self.cards.count)
             let card = self.cards.removeFirst()
-            print(" remove card", card)
+//            print(" remove card", card)
             hand.push(card)
-            print("items", self.hand.items)
+//            print("items", self.hand.items)
         }
     }
     

@@ -12,34 +12,37 @@ import SwiftUI
 
 struct Opponent: View {
  
-    @State var hand:Array<Card> = []
-    @State var deck:Deck
+//    @State var hand:Array<Card> = []
+    @State var deck:Deck = nil;
     @Binding var isActive:Bool
     @State var points:Int = 25
+    @State var hand:Pile = Pile();
    
-    init(Active: Binding<Bool>, deck_:Deck!){
+    init(Active: Binding<Bool>){
         _isActive = Active
-        _deck = State(initialValue: deck_)
+//        _deck = State(initialValue: Deck(hand: $pile))
     }
     
     
 //    init() {
 //         Deck(owner: "_red", cards: $deck)
 //    }
+    func setDeck() {
+        self.deck = Deck(hand: $hand)
+    }
     
-
     func getDeck() -> Deck? {
         return(self.deck)
     }
     
-    func getHand() -> Array<Card>? {
+    func getHand() -> Pile {
         return(hand)
     }
     
    var body: some View {
         VStack {
             HStack{
-                ForEach(self.hand, id: \.self) { card in
+                ForEach(self.hand.items, id: \.self) { card in
                     Image("back")
                         .resizable()
                         .aspectRatio(0.90, contentMode: .fill)
@@ -52,6 +55,8 @@ struct Opponent: View {
            
         Text("Opponent")
         .foregroundColor(.red)
+        }.onAppear() {
+            self.setDeck()
         }
     }
 }

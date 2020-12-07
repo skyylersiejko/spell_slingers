@@ -5,7 +5,6 @@
 //  Created by Skyyler Siejko on 11/15/20.
 //  Copyright © 2020 Skyyler Siejko. All rights reserved.
 //
-
 import Foundation
 import UIKit
 
@@ -33,7 +32,7 @@ class GameLoop : NSObject {
         * The display link will make a best-effort attempt at issuing callbacks
         * at the requested rate.
         */
-        displayLink.preferredFramesPerSecond = 0
+        displayLink.preferredFramesPerSecond = 10
         displayLink.add(to: .main, forMode: RunLoop.Mode.common)
     }
 

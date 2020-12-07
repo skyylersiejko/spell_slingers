@@ -15,25 +15,28 @@ import SwiftUI
 struct Stack: View{
 
     @Binding var stack:Array<Card>
-    @Binding var items: Array<Card>
+//    @Binding var items: Array<Card>
+    @Binding var items: Pile
     @Binding var blue_points: Int
     @Binding var red_points: Int
     
 
 
     func update(){
-       //print(self.items.count)
-        if(self.items.count > 0){
-            print("incount")
-                for i in 0...self.items.count-1{
-                if(self.items[i].isCasted && self.items.contains(self.items[i])){
-                    print("casted" + self.items[i].name)
-                    self.stack.insert(self.items[i], at: 0 )
-                    self.items.remove(at:i)
-                }
+//        self.add()
+        if(self.items.items.count > 0) {
+            for i in 0...self.items.items.count{
+                if(self.items.items[i].isCasted && self.items.items.contains(self.items.items[i])){
+                    self.stack.insert(self.items.items[i], at: 0 )
+                    self.items.remove(index: i)
             }
         }
+      }
     }
+    
+//    func add() {
+//        self.items.append(Card(_id: 10, name: "cool",power: 4, owner:"blue" ))
+//    }
     
     func resolve(){
         while self.stack.count > 0{

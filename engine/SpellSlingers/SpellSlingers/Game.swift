@@ -8,40 +8,46 @@
 
 import Foundation
 import SwiftUI
-import QuartzCore
-    
+
+
 struct Game: View{
-    @State var stack:Array<Card> = []
+    @State var stack_items:Array<Card> = []
+    @State var stack:Stack!
     @State var discard:Array<Card> = []
-  
-    
     @State var player_IsActive = true
     @State var opponent_IsActive = false
-    @State var GameState:Int = 2
-    var player: Player! = nil
-    @State var player_hand: Pile = Pile()
-    @State var opponent_hand: Pile = Pile()
-    var opponent: Opponent! = nil
-  
+    @State var player:Player!
+    @State var opponent:Opponent!
+    @State var GameState:Int = 0
     
-   
-  
-    
-     func start() {
-       
-        player.deck.cards = player.deck.create()
-        opponent.deck.cards = opponent.deck.create()
-        self.GameState = 2
-       
-        GameLoop(loop: self.gameLoop)
-        print("started Loop")
-       
+    func setStack() {
+        self.stack = Stack(stack: $stack_items,
+        items: self.opponent.$hand,
+        blue_points: self.player.$points,
+        red_points: self.opponent.$points)
+    }
+    func setPlayers() {
+        self.player = Player(Active: $player_IsActive)
+        self.opponent = Opponent(Active: $opponent_IsActive)
     }
     
+    func start() {
+        self.player.setDeck()
+        self.opponent.setDeck()
+        self.GameState = 2
+        GameLoop(loop: self.gameLoop)
+    }
     
-    func gameLoop(){
+    func gameLoop() {
         self.update()
     }
+    
+//    func addToStackItems() {
+//        var lastCard = self.player.addtoPile()!
+//        if(lastCard != nil) {
+//            self.stack_items.append(lastCard)
+//        }
+//    }
     
     func switchPriority(){
         if(self.opponent_IsActive){
@@ -54,7 +60,6 @@ struct Game: View{
             self.player_IsActive = false
             self.opponent_IsActive = false
         }
-        self.GameState += 1
     }
     
     func update(){
@@ -65,24 +70,27 @@ struct Game: View{
                 self.switchPriority()
             case 2: // update stack
                 if(self.opponent_IsActive) {
-                    Stack(stack: $stack,
-                          items:opponent.$hand,
-                          blue_points: player.$points,
-                          red_points: opponent.$points).update()
+                    self.stack = Stack(stack: $stack_items,
+                                             items: self.opponent.$hand,
+                                             blue_points: self.player.$points,
+                                             red_points: self.opponent.$points)
                 } else {
-                    Stack(stack: $stack,
-                          items: player.$hand,
-                          blue_points: player.$points,
-                          red_points:opponent.$points).update()
-                   
-
+                    self.stack = Stack(stack: $stack_items,
+                                       items: self.player.$hand,
+                                       blue_points: self.player.$points,
+                                       red_points: self.opponent.$points)
                 }
-                self.GameState += 1
+                self.stack.update()
+//                print(self.stack_items.count)
+//                self.GameState += 1
             case 3: //resolve stack 
-                Stack(stack: $stack,
-                      items: player.$hand,
-                      blue_points: player.$points,
-                      red_points: opponent.$points).resolve()
+                self.stack = Stack(stack: $stack_items,
+                                   items: self.player.$hand,
+                      blue_points: self.player.$points,
+                      red_points: self.opponent.$points)
+                
+//                self.stack.resolve()
+//                print(self.stack_items.count)
             default:
                 self.start()
             
@@ -92,20 +100,20 @@ struct Game: View{
     
    var body: some View {
         VStack {
-            opponent
-           
+            self.opponent
             HStack {
-            Stack(stack: $stack,
-                  items: player.$hand,
-                  blue_points:player.$points,
-                  red_points: opponent.$points)
-            Discard(discard: $discard, items: $stack)
+//            Stack(stack: $stack,
+//                  items: self.player.$hand,
+//                  blue_points: self.player.$points,
+//                  red_points: self.player.$points)
+            self.stack
+            Discard(discard: $discard, items: $stack_items)
             }
-                
-            
-            player
-           
-            
+            self.player
+        }.onAppear() {
+            self.setPlayers()
+            self.start()
+            self.setStack()
     }
        
     }
