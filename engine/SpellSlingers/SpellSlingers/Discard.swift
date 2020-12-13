@@ -59,7 +59,7 @@ struct Discard: View{
             if(self.discard.count > 0){
                 ZStack{
                     ForEach(self.discard, id: \.self) { card in
-                       Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+                        Card(_id: card._id, name: card.name,power:card.power, owner:card.owner)
             
                     }
                 }

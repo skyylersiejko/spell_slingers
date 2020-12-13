@@ -32,7 +32,7 @@ class GameLoop : NSObject {
         * The display link will make a best-effort attempt at issuing callbacks
         * at the requested rate.
         */
-        displayLink.preferredFramesPerSecond = 10
+        displayLink.preferredFramesPerSecond = 0
         displayLink.add(to: .main, forMode: RunLoop.Mode.common)
     }
 

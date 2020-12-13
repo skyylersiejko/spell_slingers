@@ -31,12 +31,19 @@ struct Card: View,Hashable{
         self.name = name
         self.power = power
         self.owner = owner
-        
-       
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(self._id)
+    }
+    
+    func getIsCasted() -> Bool{
+//        print(self.isCasted);
+        return(self.isCasted);
+    }
+    
+    func setIsCasted() {
+        self.isCasted = true;
     }
     
   var body: some View {
@@ -70,8 +77,10 @@ struct Card: View,Hashable{
                              //self.offset = .zero
                            if abs(self.offset.height) > 200{
                                 //self.removal?()
-                            self.isCasted = true
-                            
+                            self.setIsCasted();
+                            print(self.isCasted)
+                            print("adding card to pile")
+                            print("Casted : ",self.isCasted)
                             }else {
                                 self.offset = .zero
                             }

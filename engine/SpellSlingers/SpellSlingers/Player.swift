@@ -10,35 +10,35 @@ import Foundation
 import SwiftUI
 
 struct Player: View {
-    
-    @State var deck:Deck = nil
+//    @property class *callStack:NSArray<NSString *>
+    @State var deck:Deck!
     @Binding var isActive:Bool
     @State var points:Int = 25
-    @State var hand:Pile = Pile()
+    @ObservedObject var hand = Hand()
 //    {
 //        willSet {
 //            self.setDeck()
 //        }
 //    }
-   
+    
     init(Active: Binding<Bool>){
         _isActive = Active
     }
     
     func setDeck() {
-        self.deck = Deck(hand: $hand)
+        self.deck = Deck(hand: $hand.value)
     }
     
-//    func addtoPile() -> Card?{
-//        self.deck?.chooseCard()
-//    }
+    func addtoPile() {
+        self.deck.chooseCard()
+    }
     
     func getDeck() -> Deck? {
         return(self.deck)
     }
     
     func getHand() -> Pile {
-        return(hand)
+        return(hand.value)
     }
     
       var body: some View {
@@ -50,17 +50,21 @@ struct Player: View {
 //                self.deck.chooseCard()
 //            }
             self.deck
+//            Deck(hand: $hand)
+            Text(String(self.hand.value.items.count))
          Text("Player")
             .foregroundColor(.blue)
          HStack{
-            ForEach(self.hand.items, id: \.self) { card in
+            ForEach(self.hand.value.items, id: \.self) { card in
                 VStack{
-                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner)
                 }
             }
          }
         }.onAppear() {
             self.setDeck()
+            print(self.deck.cards.count)
+//            self.addtoPile()
         }
     }
 }

@@ -37,8 +37,8 @@ struct Deck: View{
 
   
     func create() -> Array<Card>{
-        for cardIndex in 0...CARDS.count-1 {
-            for i in 0...CARD_AMOUNT.count-1 {
+        for cardIndex in 0..<CARDS.count {
+            for i in 0..<CARD_AMOUNT.count {
                 for _ in 0...CARD_AMOUNT[i] {
                 self.cards.append(Card(_id:cardIndex,name: CARDS[cardIndex], power: CARD_POWER[cardIndex], owner: self.owner ))
                 }
@@ -47,13 +47,14 @@ struct Deck: View{
         
         if(self.cards.count > 1){
             self.chooseCard()
-//            print(self.hand.items.count)
+//            print("cards count : ",self.cards.count)
             return self.shuffle()
            
         }else{
             self.cards = self.shuffle()
             print(self.cards)
         }
+//        print("cards count : ",self.cards.count)
         return self.cards
     }
     
@@ -72,7 +73,6 @@ struct Deck: View{
             let card = self.cards[i]
             newDeck.append(card)
             self.cards.remove(at: i )
-            
         }
         
         self.cards = newDeck
@@ -84,6 +84,8 @@ struct Deck: View{
         if(self.cards.count > 0){
             print("choose",self.cards.count)
             let card = self.cards.removeFirst()
+        
+            print("card to add",card.name)
 //            print(" remove card", card)
             hand.push(card)
 //            print("items", self.hand.items)
@@ -112,8 +114,6 @@ struct Deck: View{
     }.onAppear {
         if(self.cards.count < 1){
             self.cards = self.create()
-
-           
         }
     }
 //        Button(action:{

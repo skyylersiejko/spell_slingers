@@ -25,8 +25,9 @@ struct Stack: View{
     func update(){
 //        self.add()
         if(self.items.items.count > 0) {
-            for i in 0...self.items.items.count{
-                if(self.items.items[i].isCasted && self.items.items.contains(self.items.items[i])){
+            for i in 0..<self.items.items.count{
+                if(self.items.items[i].getIsCasted()){
+                    print(self.items.items[i].getIsCasted())
                     self.stack.insert(self.items.items[i], at: 0 )
                     self.items.remove(index: i)
             }
@@ -83,7 +84,7 @@ struct Stack: View{
                     .cornerRadius(30.0)
             } else {
                 ForEach(self.stack, id: \.self) { card in
-                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner )
+                    Card(_id: card._id, name: card.name,power:card.power, owner:card.owner)
                 }
             }
         }

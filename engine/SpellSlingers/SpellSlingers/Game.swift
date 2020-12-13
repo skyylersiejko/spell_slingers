@@ -19,13 +19,15 @@ struct Game: View{
     @State var player:Player!
     @State var opponent:Opponent!
     @State var GameState:Int = 0
+//    @ObservedObject var test_obs = test()
     
     func setStack() {
         self.stack = Stack(stack: $stack_items,
-        items: self.opponent.$hand,
+                           items: self.player.$hand.value,
         blue_points: self.player.$points,
         red_points: self.opponent.$points)
     }
+    
     func setPlayers() {
         self.player = Player(Active: $player_IsActive)
         self.opponent = Opponent(Active: $opponent_IsActive)
@@ -71,23 +73,24 @@ struct Game: View{
             case 2: // update stack
                 if(self.opponent_IsActive) {
                     self.stack = Stack(stack: $stack_items,
-                                             items: self.opponent.$hand,
-                                             blue_points: self.player.$points,
-                                             red_points: self.opponent.$points)
+                                       items: self.opponent.$hand,
+                                       blue_points: self.player.$points,
+                                       red_points: self.opponent.$points)
                 } else {
+//                    print(self.player.hand.value)
                     self.stack = Stack(stack: $stack_items,
-                                       items: self.player.$hand,
+                                       items: self.player.$hand.value,
                                        blue_points: self.player.$points,
                                        red_points: self.opponent.$points)
                 }
                 self.stack.update()
 //                print(self.stack_items.count)
 //                self.GameState += 1
-            case 3: //resolve stack 
+            case 3: //resolve stack
                 self.stack = Stack(stack: $stack_items,
-                                   items: self.player.$hand,
-                      blue_points: self.player.$points,
-                      red_points: self.opponent.$points)
+                                   items: self.player.$hand.value,
+                                   blue_points: self.player.$points,
+                                   red_points: self.opponent.$points)
                 
 //                self.stack.resolve()
 //                print(self.stack_items.count)
@@ -102,7 +105,7 @@ struct Game: View{
         VStack {
             self.opponent
             HStack {
-//            Stack(stack: $stack,
+//            Stack(stack: $stack_items,
 //                  items: self.player.$hand,
 //                  blue_points: self.player.$points,
 //                  red_points: self.player.$points)
@@ -110,6 +113,7 @@ struct Game: View{
             Discard(discard: $discard, items: $stack_items)
             }
             self.player
+//            Player(Active: $player_IsActive)
         }.onAppear() {
             self.setPlayers()
             self.start()
