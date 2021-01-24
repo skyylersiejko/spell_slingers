@@ -10,12 +10,12 @@ import Foundation
 import SwiftUI
 
 struct Pile: View {
-    public var card_name = [""]
-    public var card_text = [""]
+    public var card_name = ["cancel", "resolve", "resource", "recycle", "spell"]
+    public var card_text = ["delete the top card of the stack", "resolve the Stack", "gain power to cast spells", "add your hand to your deck, shuffle it, draw taht many cards.", "deal damage equal to your power"]
     public var items = [Card]() // Empty items array
     mutating func push(_ item: Card) {
         items.append(item)
-    }
+    }           
     
     mutating func pop() -> Card? {
         if !items.isEmpty {
