@@ -51,14 +51,23 @@ struct CardView : View {
         
         
         return ZStack {
-            Card(name: self.card_name, power: self.power, owner: self.owner)
+            Image(self.card_name+self.owner).resizable()
+                       .cornerRadius(10)
+                       .frame(width: 210, height: 320)
+            .offset(x: 0, y: 80)
+                   .animation(.spring())
+                       
+            Text(self.card_name)
+                           .font(.largeTitle)
+                           .bold()
+                           .foregroundColor(.white)
+                   }.shadow(radius: 6)
                 .offset(dragInfo.translation)
                 .gesture(gesture)
         }
-        .offset(x: 0, y: 80)
-        .animation(.spring())
+       
     }
-}
+
 
 
 

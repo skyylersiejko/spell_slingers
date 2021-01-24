@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C32B350E25BD305500254F9A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B350D25BD305500254F9A /* Card.swift */; };
-		C32B351025BD305A00254F9A /* StatefulPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B350F25BD305A00254F9A /* StatefulPreview.swift */; };
+		C32B351225BD983300254F9A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B351125BD983300254F9A /* Player.swift */; };
+		C32B351425BD984000254F9A /* StatefulPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B351325BD984000254F9A /* StatefulPreview.swift */; };
 		C32C7C422558EFD3000B2847 /* SpellSlingers in Resources */ = {isa = PBXBuildFile; fileRef = C32C7C412558EFD3000B2847 /* SpellSlingers */; };
 		C32C7C4A2558EFEF000B2847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C482558EFEF000B2847 /* ContentView.swift */; };
 		C32C7C4B2558EFEF000B2847 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C432558EFEF000B2847 /* Menu.swift */; };
@@ -49,7 +50,8 @@
 
 /* Begin PBXFileReference section */
 		C32B350D25BD305500254F9A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		C32B350F25BD305A00254F9A /* StatefulPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreview.swift; sourceTree = "<group>"; };
+		C32B351125BD983300254F9A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C32B351325BD984000254F9A /* StatefulPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreview.swift; sourceTree = "<group>"; };
 		C32C7C412558EFD3000B2847 /* SpellSlingers */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpellSlingers; sourceTree = SOURCE_ROOT; };
 		C32C7C432558EFEF000B2847 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C32C7C452558EFEF000B2847 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
@@ -105,8 +107,6 @@
 		C368391725511CF000FD50A4 = {
 			isa = PBXGroup;
 			children = (
-				C32B350D25BD305500254F9A /* Card.swift */,
-				C32B350F25BD305A00254F9A /* StatefulPreview.swift */,
 				C368392225511CF000FD50A4 /* SpellSlingers */,
 				C368393925511CF200FD50A4 /* SpellSlingersTests */,
 				C368394425511CF200FD50A4 /* SpellSlingersUITests */,
@@ -130,6 +130,7 @@
 				C368392325511CF000FD50A4 /* AppDelegate.swift */,
 				C32C7C492558EFEF000B2847 /* Hand.swift */,
 				C368392525511CF000FD50A4 /* SceneDelegate.swift */,
+				C32B350D25BD305500254F9A /* Card.swift */,
 				C368392725511CF000FD50A4 /* ContentView.swift */,
 				C39EA95D255FBCB300E1FAAB /* resolve.png */,
 				C368392925511CF200FD50A4 /* Assets.xcassets */,
@@ -139,7 +140,9 @@
 				C3C300E12590F7830041801B /* CardView.swift */,
 				C32C7C482558EFEF000B2847 /* ContentView.swift */,
 				C370367C258F9560009101BE /* GameLoop.swift */,
+				C32B351125BD983300254F9A /* Player.swift */,
 				C32C7C452558EFEF000B2847 /* Deck.swift */,
+				C32B351325BD984000254F9A /* StatefulPreview.swift */,
 				C32C7C58255930DB000B2847 /* Info.plist */,
 				C32C7C5A25593135000B2847 /* Deck.swift */,
 				C32C7C462558EFEF000B2847 /* Game.swift */,
@@ -310,9 +313,10 @@
 			files = (
 				C32C7C5B25593135000B2847 /* Deck.swift in Sources */,
 				C32C7C4D2558EFEF000B2847 /* Deck.swift in Sources */,
-				C32B351025BD305A00254F9A /* StatefulPreview.swift in Sources */,
+				C32B351425BD984000254F9A /* StatefulPreview.swift in Sources */,
 				C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */,
 				C370367D258F9560009101BE /* GameLoop.swift in Sources */,
+				C32B351225BD983300254F9A /* Player.swift in Sources */,
 				C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */,
 				C3C300E22590F7830041801B /* CardView.swift in Sources */,
 				C32C7C4B2558EFEF000B2847 /* Menu.swift in Sources */,

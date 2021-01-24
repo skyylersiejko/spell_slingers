@@ -23,15 +23,9 @@ struct Card : View {
                 .cornerRadius(10)
                 .frame(width: 210, height: 320) //w:320, height : 210 */
              
+            CardView(card_name:self.name, owner:self.owner, power:self.power)
             
-            Image(name+owner).resizable()
-            .cornerRadius(10)
-            .frame(width: 210, height: 320)
-            
-            Text(name)
-                .font(.largeTitle)
-                .bold()
-                .foregroundColor(.white)
+           
         }.shadow(radius: 6)
     }
 }

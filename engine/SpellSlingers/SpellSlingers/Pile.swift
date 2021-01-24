@@ -45,7 +45,7 @@ struct Pile: View {
     var body: some View {
         HStack{
             ForEach(items, id: \.name) { card in
-                CardView(card_name: card.name,owner: card.owner,power: card.power)
+                Card(name:card.name, power: card.power, owner: card.owner)
             }
         }
     }
