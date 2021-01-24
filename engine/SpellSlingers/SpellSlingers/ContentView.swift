@@ -35,7 +35,6 @@ var body: some View {
                        case 0:
                            return AnyView(Menu())
                        case 1:
-                        Game().start()
                         return AnyView(Game())
                        case 2:
                         return AnyView(Menu())
@@ -58,7 +57,7 @@ var body: some View {
     struct ContentView_Previews: PreviewProvider {
        
         static var previews: some View {
-            StatefulPreview(0) {ContentView(ViewState: $0)}
+         StatefulPreview(0) {ContentView(ViewState: $0)}
            
         }
     }
