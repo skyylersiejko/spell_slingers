@@ -30,10 +30,15 @@ enum DragInfo {
     }
 }
 
-struct CardTest : View {
+struct CardView : View {
     
     @GestureState var dragInfo = DragInfo.inactive
-    
+    var card_name:String
+    var owner:String
+    init(card_name: String, owner: String) {
+        self.card_name = card_name
+        self.owner = owner
+    }
     var body: some View {
         let gesture = DragGesture()
             .updating($dragInfo) { (value, dragInfo, _) in
@@ -44,8 +49,7 @@ struct CardTest : View {
         
         
         return ZStack {
-        
-            Card(name: "cancel", color: .black, owner: "_blue")
+            Card(name: self.card_name, color: .black, owner: self.owner)
                 .offset(dragInfo.translation)
                 .gesture(gesture)
         }

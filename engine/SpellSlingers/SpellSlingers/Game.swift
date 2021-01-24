@@ -14,7 +14,7 @@ struct Game: View{
    
    var body: some View {
         VStack {
-           Text("Game")
+           CardView(card_name: "cancel", owner: "_blue")
         }
        
     }
