@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Player: View {
 //    @property class *callStack:NSArray<NSString *>
-    @State var deck:Deck!
+    @State var deck:Deck?
     @Binding var isActive:Bool
     @State var points:Int = 25
     @ObservedObject var hand = Hand()
@@ -30,7 +30,12 @@ struct Player: View {
     }
     
     func addtoPile() {
-        self.deck.chooseCard()
+        if let decks = self.deck{
+            decks.chooseCard()
+        }else{
+            print ("deck not defined in Player")
+        }
+    
     }
     
     func getDeck() -> Deck? {
@@ -63,7 +68,11 @@ struct Player: View {
          }
         }.onAppear() {
             self.setDeck()
-            print(self.deck.cards.count)
+            if let decks = self.deck{
+                decks.chooseCard()
+            }else{
+                print ("deck not defined in Player")
+            }
 //            self.addtoPile()
         }
     }
