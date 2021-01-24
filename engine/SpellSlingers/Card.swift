@@ -13,7 +13,7 @@ import SwiftUI
 struct Card : View {
     
     let name: String
-    let color: Color
+    let power: Int
     let owner : String
     
     var body: some View {

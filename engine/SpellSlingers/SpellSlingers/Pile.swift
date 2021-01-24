@@ -15,7 +15,15 @@ struct Pile: View {
     public var items = [Card]() // Empty items array
     mutating func push(_ item: Card) {
         items.append(item)
-    }           
+    }
+    
+//    mutating func getItems() -> Array<Card>{
+//        return(items)
+//    }
+//    
+//    mutating func setItems(_ item: Array<Card>) {
+//        self.items = item
+//    }
     
     mutating func pop() -> Card? {
         if !items.isEmpty {
@@ -28,12 +36,6 @@ struct Pile: View {
         items.remove(at: index)
     }
     
-//    mutating func draw() {
-//        for card in items {
-//            CardView(card_name: card.name, owner: card.owner)
-//        }
-//    }
-    
     mutating func returnLast() -> Card? {
         if !items.isEmpty {
             return items.last
@@ -43,7 +45,7 @@ struct Pile: View {
     var body: some View {
         HStack{
             ForEach(items, id: \.name) { card in
-                CardView(card_name: card.name, owner: card.owner)
+                CardView(card_name: card.name,owner: card.owner,power: card.power)
             }
         }
     }

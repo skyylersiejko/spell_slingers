@@ -11,11 +11,33 @@ import SwiftUI
 
 
 struct Game: View{
-   
+    @State var Stack: Pile = Pile()
+    @State var decktmp: Pile = Pile()
+    @State var player:Player?
+    
+    func setPlayer() {
+        self.player = Player(deck: $decktmp)
+    }
+    func test_pile() {
+        self.Stack.push(Card(name: "cancel",power:10,owner:"_blue"))
+        self.Stack.push(Card(name: "cancel",power:10,owner:"_blue"))
+//        self.player.deck.push(Card(name: "recycle",power:10,owner:"_red"))
+        
+    }
    var body: some View {
         VStack {
-           CardView(card_name: "cancel", owner: "_blue")
-        }
-       
+//              self.decktmp
+            self.Stack
+//            self.player.deck
+//            self.player.hand
+        }.onAppear {
+            self.test_pile()
+//            self.setPlayer()
+//            self.player?.createDeck()
+//            self.player.shuffleDeck()
+//            self.player.drawFromDeck()
+//            self.player.drawFromDeck()
+//            self.player.drawFromDeck()
+    }
     }
 }
