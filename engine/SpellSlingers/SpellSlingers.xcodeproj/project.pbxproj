@@ -15,7 +15,6 @@
 		C32C7C4C2558EFEF000B2847 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C462558EFEF000B2847 /* Game.swift */; };
 		C32C7C4D2558EFEF000B2847 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C452558EFEF000B2847 /* Deck.swift */; };
 		C32C7C4E2558EFEF000B2847 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C492558EFEF000B2847 /* Hand.swift */; };
-		C32C7C5725592D67000B2847 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5625592D67000B2847 /* Player.swift */; };
 		C32C7C5B25593135000B2847 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5A25593135000B2847 /* Deck.swift */; };
 		C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392325511CF000FD50A4 /* AppDelegate.swift */; };
 		C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392525511CF000FD50A4 /* SceneDelegate.swift */; };
@@ -57,7 +56,6 @@
 		C32C7C462558EFEF000B2847 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		C32C7C482558EFEF000B2847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C32C7C492558EFEF000B2847 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
-		C32C7C5625592D67000B2847 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C32C7C58255930DB000B2847 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32C7C5A25593135000B2847 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		C368392025511CF000FD50A4 /* SpellSlingers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellSlingers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +105,8 @@
 		C368391725511CF000FD50A4 = {
 			isa = PBXGroup;
 			children = (
+				C32B350D25BD305500254F9A /* Card.swift */,
+				C32B350F25BD305A00254F9A /* StatefulPreview.swift */,
 				C368392225511CF000FD50A4 /* SpellSlingers */,
 				C368393925511CF200FD50A4 /* SpellSlingersTests */,
 				C368394425511CF200FD50A4 /* SpellSlingersUITests */,
@@ -130,7 +130,6 @@
 				C368392325511CF000FD50A4 /* AppDelegate.swift */,
 				C32C7C492558EFEF000B2847 /* Hand.swift */,
 				C368392525511CF000FD50A4 /* SceneDelegate.swift */,
-				C32C7C5625592D67000B2847 /* Player.swift */,
 				C368392725511CF000FD50A4 /* ContentView.swift */,
 				C39EA95D255FBCB300E1FAAB /* resolve.png */,
 				C368392925511CF200FD50A4 /* Assets.xcassets */,
@@ -140,9 +139,7 @@
 				C3C300E12590F7830041801B /* CardView.swift */,
 				C32C7C482558EFEF000B2847 /* ContentView.swift */,
 				C370367C258F9560009101BE /* GameLoop.swift */,
-				C32B350F25BD305A00254F9A /* StatefulPreview.swift */,
 				C32C7C452558EFEF000B2847 /* Deck.swift */,
-				C32B350D25BD305500254F9A /* Card.swift */,
 				C32C7C58255930DB000B2847 /* Info.plist */,
 				C32C7C5A25593135000B2847 /* Deck.swift */,
 				C32C7C462558EFEF000B2847 /* Game.swift */,
@@ -319,7 +316,6 @@
 				C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */,
 				C3C300E22590F7830041801B /* CardView.swift in Sources */,
 				C32C7C4B2558EFEF000B2847 /* Menu.swift in Sources */,
-				C32C7C5725592D67000B2847 /* Player.swift in Sources */,
 				C32C7C4A2558EFEF000B2847 /* ContentView.swift in Sources */,
 				C32B350E25BD305500254F9A /* Card.swift in Sources */,
 				C32C7C4E2558EFEF000B2847 /* Hand.swift in Sources */,
