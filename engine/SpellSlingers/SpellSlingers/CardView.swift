@@ -45,7 +45,7 @@ struct CardTest : View {
         
         return ZStack {
         
-            CardView(name: "cancel", color: .black, owner: "_blue")
+            Card(name: "cancel", color: .black, owner: "_blue")
                 .offset(dragInfo.translation)
                 .gesture(gesture)
         }
@@ -57,28 +57,3 @@ struct CardTest : View {
 
 
 
-struct CardView : View {
-    
-    let name: String
-    let color: Color
-    let owner : String
-    
-    var body: some View {
-        ZStack {
-           /* Rectangle()
-                .fill(color)
-                .cornerRadius(10)
-                .frame(width: 210, height: 320) //w:320, height : 210 */
-             
-            
-            Image(name+owner).resizable()
-            .cornerRadius(10)
-            .frame(width: 210, height: 320)
-            
-            Text(name)
-                .font(.largeTitle)
-                .bold()
-                .foregroundColor(.white)
-        }.shadow(radius: 6)
-    }
-}

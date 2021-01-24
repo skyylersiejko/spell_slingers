@@ -57,7 +57,7 @@ var body: some View {
     struct ContentView_Previews: PreviewProvider {
        
         static var previews: some View {
-            StatefulPreview(0) {ContentView(ViewState: $0)}
+         StatefulPreview(0) {ContentView(ViewState: $0)}
            
         }
     }

@@ -11,7 +11,7 @@ import Foundation
 
 struct Pile {
     public var items = [Card]() // Empty items array
-    mutating func push(_ item: Card) {
+    mutating func push(_ item: CardView) {
         items.append(item)
     }
     
