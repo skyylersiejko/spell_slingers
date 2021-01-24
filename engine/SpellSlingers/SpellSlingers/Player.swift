@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct Player {
-    @State var hand: Pile = Pile()
+    @Binding var hand: Pile
     @Binding var deck: Pile
     @State var queue: Pile = Pile()
     @State var willPower: Int = 25
@@ -19,17 +19,24 @@ struct Player {
     var card_amount = [4,4,4,4,4]
     var card_power = [10,30,20,4,4]
     
-    init(deck: Binding<Pile>) {
+    init(deck: Binding<Pile>, hand: Binding<Pile>) {
         _deck = deck
+        _hand = hand
     }
-    func drawFromDeck() {
-        let draw_card = self.deck.pop()
-        if(draw_card != nil) {
-            self.hand.push(draw_card!)
+    func drawCard() {
+      
+        if(self.deck.items.count > 0){
+            print("hit")
+            self.hand.push(self.deck.pop()!)
         }
+        
+        print(self.hand.items.count)
+        
+        
     }
     
     func createDeck(){
+       
 //        var tempPile = Pile()
         for cardIndex in 0..<card_name.count {
             for i in 0..<card_amount.count {

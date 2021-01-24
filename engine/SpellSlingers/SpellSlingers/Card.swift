@@ -26,7 +26,8 @@ struct Card : View {
             CardView(card_name:self.name, owner:self.owner, power:self.power)
             
            
-        }.shadow(radius: 6)
+        }
+        
     }
 }
 
