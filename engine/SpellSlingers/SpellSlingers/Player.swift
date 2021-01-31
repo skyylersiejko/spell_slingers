@@ -41,7 +41,7 @@ struct Player {
         for cardIndex in 0..<card_name.count {
             for i in 0..<card_amount.count {
                 for _ in 0...card_amount[i] {
-                    self.deck.push(Card(name: card_name[cardIndex], power: card_power[cardIndex], owner: "_blue" ))
+                    self.deck.push(Card(name: card_name[cardIndex], power: card_power[cardIndex], owner: "_blue", isActive: false ))
                 }
             }
         }

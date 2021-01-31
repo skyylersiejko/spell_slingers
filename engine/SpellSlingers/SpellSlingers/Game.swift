@@ -55,7 +55,7 @@ struct Game: View{
             //do player casting logic
             if( true){ //self.Stack.isActive == true
                 for i in 0..<self.player_hand.items.count{
-                    print(self.player_hand.items[i].getActive())
+                    print(self.player_hand.items[i].dragable.self.isActive)
                     if(self.player_hand.items[i].getActive()){
                         self.Stack.push(self.player_hand.items[i])
                         print("hit stack")

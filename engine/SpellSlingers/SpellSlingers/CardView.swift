@@ -32,23 +32,37 @@ enum DragInfo {
 
 struct CardView : View {
     
+    
     @GestureState var dragInfo = DragInfo.inactive
     var card_name:String
     var owner:String
     var power: Int
-    @State var isActive: Bool = false
+  
     init(card_name: String, owner: String, power: Int) {
         self.card_name = card_name
         self.owner = owner
         self.power = power
+       
     }
+    
+
+    
+    
+    
     var body: some View {
-        let gesture = DragGesture()
+      /*  let gesture = DragGesture()
             .updating($dragInfo) { (value, dragInfo, _) in
                 dragInfo = .active(translation: value.translation)
-                self.isActive = dragInfo.isActive
-            }
-        
+              
+        }
+        .onChanged { value in
+            
+            
+        }.onEnded{ value in
+            
+          
+        }
+        */
         
         
         return ZStack() {
@@ -64,8 +78,9 @@ struct CardView : View {
                            .bold()
                            .foregroundColor(.white)
                    }.shadow(radius: 6)
-                .offset(dragInfo.translation)
-                .gesture(gesture)
+              /*  .offset(dragInfo.translation)
+                .gesture(gesture)*/
+            
         }
        
     }
