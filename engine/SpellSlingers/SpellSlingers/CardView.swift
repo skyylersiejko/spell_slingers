@@ -36,6 +36,7 @@ struct CardView : View {
     var card_name:String
     var owner:String
     var power: Int
+    @State var isActive: Bool = false
     init(card_name: String, owner: String, power: Int) {
         self.card_name = card_name
         self.owner = owner
@@ -45,7 +46,7 @@ struct CardView : View {
         let gesture = DragGesture()
             .updating($dragInfo) { (value, dragInfo, _) in
                 dragInfo = .active(translation: value.translation)
-                
+                self.isActive = dragInfo.isActive
             }
         
         

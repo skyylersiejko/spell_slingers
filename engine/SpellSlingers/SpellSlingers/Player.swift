@@ -14,7 +14,7 @@ struct Player {
     @Binding var deck: Pile
     @State var queue: Pile = Pile()
     @State var willPower: Int = 25
-    @State var isActive: Bool = false
+    @State var isActive: Bool = true
     var card_name = ["cancel", "resolve", "resource", "recycle","spell"]
     var card_amount = [4,4,4,4,4]
     var card_power = [10,30,20,4,4]

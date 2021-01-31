@@ -15,17 +15,32 @@ struct Card : View {
     let name: String
     let power: Int
     let owner : String
+    public var isActive: Bool = false
+    @State var cardView: CardView?
+    
+    mutating func getActive() -> Bool{
+        print( "stuff",((self.cardView?.isActive) != nil))
+            self.isActive = ((self.cardView?.isActive) != nil)
+        return self.isActive
+        
+    }
+    
+    
+    func load(){
+        self.cardView = CardView(card_name:self.name, owner:self.owner, power:self.power)
+    }
     
     var body: some View {
-        ZStack {
+        VStack {
            /* Rectangle()
                 .fill(color)
                 .cornerRadius(10)
                 .frame(width: 210, height: 320) //w:320, height : 210 */
-             
-            CardView(card_name:self.name, owner:self.owner, power:self.power)
-            
            
+            self.cardView
+           
+        } .onAppear{
+            self.load()
         }
         
     }
