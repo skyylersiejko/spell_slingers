@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32B350E25BD305500254F9A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B350D25BD305500254F9A /* Card.swift */; };
+		C32B351225BD983300254F9A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B351125BD983300254F9A /* Player.swift */; };
+		C32B351425BD984000254F9A /* StatefulPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B351325BD984000254F9A /* StatefulPreview.swift */; };
+		C32C7C422558EFD3000B2847 /* SpellSlingers in Resources */ = {isa = PBXBuildFile; fileRef = C32C7C412558EFD3000B2847 /* SpellSlingers */; };
+		C32C7C4A2558EFEF000B2847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C482558EFEF000B2847 /* ContentView.swift */; };
+		C32C7C4B2558EFEF000B2847 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C432558EFEF000B2847 /* Menu.swift */; };
+		C32C7C4C2558EFEF000B2847 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C462558EFEF000B2847 /* Game.swift */; };
+		C32C7C4D2558EFEF000B2847 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C452558EFEF000B2847 /* Deck.swift */; };
+		C32C7C4E2558EFEF000B2847 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C492558EFEF000B2847 /* Hand.swift */; };
+		C32C7C5B25593135000B2847 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C7C5A25593135000B2847 /* Deck.swift */; };
 		C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392325511CF000FD50A4 /* AppDelegate.swift */; };
 		C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392525511CF000FD50A4 /* SceneDelegate.swift */; };
 		C368392825511CF000FD50A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368392725511CF000FD50A4 /* ContentView.swift */; };
@@ -15,6 +25,10 @@
 		C368393025511CF200FD50A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */; };
 		C368393B25511CF200FD50A4 /* SpellSlingersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */; };
 		C368394625511CF200FD50A4 /* SpellSlingersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */; };
+		C370367D258F9560009101BE /* GameLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C370367C258F9560009101BE /* GameLoop.swift */; };
+		C39EA95E255FBCB300E1FAAB /* resolve.png in Resources */ = {isa = PBXBuildFile; fileRef = C39EA95D255FBCB300E1FAAB /* resolve.png */; };
+		C3C300E22590F7830041801B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C300E12590F7830041801B /* CardView.swift */; };
+		C3EEF126256405D2008FF840 /* Pile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEF125256405D2008FF840 /* Pile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C32B350D25BD305500254F9A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C32B351125BD983300254F9A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C32B351325BD984000254F9A /* StatefulPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreview.swift; sourceTree = "<group>"; };
+		C32C7C412558EFD3000B2847 /* SpellSlingers */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpellSlingers; sourceTree = SOURCE_ROOT; };
+		C32C7C432558EFEF000B2847 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		C32C7C452558EFEF000B2847 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		C32C7C462558EFEF000B2847 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		C32C7C482558EFEF000B2847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C32C7C492558EFEF000B2847 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		C32C7C58255930DB000B2847 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C32C7C5A25593135000B2847 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		C368392025511CF000FD50A4 /* SpellSlingers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellSlingers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368392325511CF000FD50A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C368392525511CF000FD50A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,13 +67,16 @@
 		C368392925511CF200FD50A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C368392C25511CF200FD50A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C368392F25511CF200FD50A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C368393125511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C368393625511CF200FD50A4 /* SpellSlingersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellSlingersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellSlingersTests.swift; sourceTree = "<group>"; };
 		C368393C25511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C368394125511CF200FD50A4 /* SpellSlingersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellSlingersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C368394525511CF200FD50A4 /* SpellSlingersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellSlingersUITests.swift; sourceTree = "<group>"; };
 		C368394725511CF200FD50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C370367C258F9560009101BE /* GameLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoop.swift; sourceTree = "<group>"; };
+		C39EA95D255FBCB300E1FAAB /* resolve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resolve.png; path = ../../../res/resolve.png; sourceTree = "<group>"; };
+		C3C300E12590F7830041801B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C3EEF125256405D2008FF840 /* Pile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +128,25 @@
 			isa = PBXGroup;
 			children = (
 				C368392325511CF000FD50A4 /* AppDelegate.swift */,
+				C32C7C492558EFEF000B2847 /* Hand.swift */,
 				C368392525511CF000FD50A4 /* SceneDelegate.swift */,
+				C32B350D25BD305500254F9A /* Card.swift */,
 				C368392725511CF000FD50A4 /* ContentView.swift */,
+				C39EA95D255FBCB300E1FAAB /* resolve.png */,
 				C368392925511CF200FD50A4 /* Assets.xcassets */,
 				C368392E25511CF200FD50A4 /* LaunchScreen.storyboard */,
-				C368393125511CF200FD50A4 /* Info.plist */,
 				C368392B25511CF200FD50A4 /* Preview Content */,
+				C3EEF125256405D2008FF840 /* Pile.swift */,
+				C3C300E12590F7830041801B /* CardView.swift */,
+				C32C7C482558EFEF000B2847 /* ContentView.swift */,
+				C370367C258F9560009101BE /* GameLoop.swift */,
+				C32B351125BD983300254F9A /* Player.swift */,
+				C32C7C452558EFEF000B2847 /* Deck.swift */,
+				C32B351325BD984000254F9A /* StatefulPreview.swift */,
+				C32C7C58255930DB000B2847 /* Info.plist */,
+				C32C7C5A25593135000B2847 /* Deck.swift */,
+				C32C7C462558EFEF000B2847 /* Game.swift */,
+				C32C7C432558EFEF000B2847 /* Menu.swift */,
 			);
 			path = SpellSlingers;
 			sourceTree = "<group>";
@@ -121,6 +162,7 @@
 		C368393925511CF200FD50A4 /* SpellSlingersTests */ = {
 			isa = PBXGroup;
 			children = (
+				C32C7C412558EFD3000B2847 /* SpellSlingers */,
 				C368393A25511CF200FD50A4 /* SpellSlingersTests.swift */,
 				C368393C25511CF200FD50A4 /* Info.plist */,
 			);
@@ -242,6 +284,7 @@
 			files = (
 				C368393025511CF200FD50A4 /* LaunchScreen.storyboard in Resources */,
 				C368392D25511CF200FD50A4 /* Preview Assets.xcassets in Resources */,
+				C39EA95E255FBCB300E1FAAB /* resolve.png in Resources */,
 				C368392A25511CF200FD50A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32C7C422558EFD3000B2847 /* SpellSlingers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +311,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32C7C5B25593135000B2847 /* Deck.swift in Sources */,
+				C32C7C4D2558EFEF000B2847 /* Deck.swift in Sources */,
+				C32B351425BD984000254F9A /* StatefulPreview.swift in Sources */,
 				C368392425511CF000FD50A4 /* AppDelegate.swift in Sources */,
+				C370367D258F9560009101BE /* GameLoop.swift in Sources */,
+				C32B351225BD983300254F9A /* Player.swift in Sources */,
 				C368392625511CF000FD50A4 /* SceneDelegate.swift in Sources */,
+				C3C300E22590F7830041801B /* CardView.swift in Sources */,
+				C32C7C4B2558EFEF000B2847 /* Menu.swift in Sources */,
+				C32C7C4A2558EFEF000B2847 /* ContentView.swift in Sources */,
+				C32B350E25BD305500254F9A /* Card.swift in Sources */,
+				C32C7C4E2558EFEF000B2847 /* Hand.swift in Sources */,
 				C368392825511CF000FD50A4 /* ContentView.swift in Sources */,
+				C3EEF126256405D2008FF840 /* Pile.swift in Sources */,
+				C32C7C4C2558EFEF000B2847 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,10 +494,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SpellSlingers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SpellSlingers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = na.SpellSlingers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -457,10 +515,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SpellSlingers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SpellSlingers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = na.SpellSlingers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -475,7 +535,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +556,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,6 +576,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,6 +596,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpellSlingersUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
